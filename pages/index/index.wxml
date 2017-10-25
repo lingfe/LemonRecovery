@@ -1,0 +1,58 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-21
+ *   描述:  首页wxss
+ * 
+ * */-->
+<view class="page">
+  <!-- 表单 start-->
+  <view class='huishou_bg' style='background-image:url(/assets/images/bg.png);'>
+    <form bindsubmit="submitForm" class="form">
+    <view class='huishou_form'>
+      <view class='form'>
+        <view class='title'>上门时间</view>
+        <view class='input'>
+        <picker  value="{{index}}" bindchange="bindPickerChange"  range="{{arr}}">
+          <input disabled='false' name="doorTime" type='text' value='{{arr[index]}}'/>
+        </picker>
+        </view>
+      </view>
+      
+      <view class='form'>
+        <view class='title'>预约地点</view>
+        <view class='input'><input name="yuyueAdress" type='text' placeholder='贵阳xxx'/></view>
+      </view>
+
+      <view class='form'>
+        <view class='title'>详细地址</view>
+        <view class='input'><input name="adressInfo" type='text' placeholder='启林创客小镇' /></view>
+      </view>
+
+      <view class='form'>
+        <view class='title'>对您称呼</view>
+        <view class='input'><input name="cellYou" type='text' placeholder='蒋先生' /></view>
+      </view>
+
+      <view class='form'>
+        <view class='title'>联系电话</view>
+        <view class='input'><input name="phone" type='text' placeholder='130xxx11xxx' /></view>
+      </view>
+
+      <button class='form_last' form-type="submit">呼叫回收</button>
+    </view>
+    </form>
+  </view>
+  <!-- 表单 end-->
+
+  <!-- 注意事项  start-->
+  <view class='huishou_text'>
+    <view class='text_top'>注意事项</view>
+    <view class='text'>• 柠檬项目正在测试期间，目前仅支持周末上门，仅支持贵阳市观山湖地区。</view>
+    <view class='text'>• 可回收物资为：<span class="span">衣服/鞋子/包包/棉被/床单</span>等。</view>
+    <view class='text'>• 物资重量计算后兑换维达抽纸作为回报。2.5KG=1包维达抽纸</view>
+    <view class='text'>• 柠檬回收之衣物进过分拣发送至工厂，拆分纤维回收利用，例如拖把桌布等。</view>
+    <view class='text'>• 预约登记后，工作人员出发前将提前与您联系确认。</view>
+    <view class='text'>• 生活原本没有垃圾，它们都是放错地方的资源，让城市呼吸，柠檬正在行动。</view>
+  </view> 
+  <!-- 注意事项  end-->
+</view>
