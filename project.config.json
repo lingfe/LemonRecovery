@@ -1,19 +1,38 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true
 	},
 	"compileType": "weapp",
-	"libVersion": "1.6.0",
-	"appid": "wxdb07051dc3fc031e",
-	"projectname": "LemonRecovery_to",
+	"libVersion": "1.5.3",
+	"appid": "wxc8884c9a5132aa7a",
+	"projectname": "LemonRecovery",
 	"condition": {
 		"weapp": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "个人",
+					"pathName": "pages/myInfo/myInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的预约",
+					"pathName": "pages/myInfo/myReservation/myReservation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sy",
+					"pathName": "pages/index/index",
+					"query": ""
+				}
+			]
 		},
 		"search": {
 			"current": -1,

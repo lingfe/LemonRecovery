@@ -1,0 +1,50 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-27
+ *   描述:  我的预约
+ * 
+ * */
+page{
+  background-color: #F7F8F3;
+}
+/*预约数据*/
+ .list{
+  width: 100%;
+  height: auto;
+ }
+
+ .list_item{
+   width: 90%;
+   height: auto;
+   background-color:#fff;
+   font-size: 26rpx;
+   color: #666; 
+   margin:20rpx auto;
+   border: 1rpx solid #fff;
+   padding-bottom: 20rpx;
+ }
+ .item{
+  width: 90%;
+  margin-top:20rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+ }
+
+ .list_item_img{
+   width: 90%;
+   height: 240rpx;
+   font-size: 26rpx;
+   color: #666; 
+   margin:20rpx auto;
+   border: 1rpx solid #F7F8F3;
+   /* background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%; */
+ }
+.item_img{
+  width: 90%;
+  margin-top:100rpx;
+  text-align: center;
+  color: #000;
+  margin-left: 20rpx;
+}

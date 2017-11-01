@@ -77,9 +77,9 @@ App({
     userInfo: null,                 //用户数据
     openid: null,                   //微信用户id
 
-    loginAppid: '3DF7469FD3A1485B95ED16ED794780A8',  //登录服务器的appid
-    appid: 'wxdb07051dc3fc031e',                    //小程序id
-    secret: 'b2dec689f9b117a311891c6ac5ae9407',     //小程序的 app secret
+    loginAppid: '873446c281194d2386f3e4c9b956725d',  //登录服务器的appid
+    appid: 'wxc8884c9a5132aa7a',                    //柠檬回收小程序id
+    secret: 'c2d88ad6eaef72493987c5e6016bed72',     //柠檬回收小程序的 app secret
     token: '31963CBD8CA24DEFB48B9799766F0583',      //请求唯一标识
   },
 
@@ -88,33 +88,5 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
   },
 })

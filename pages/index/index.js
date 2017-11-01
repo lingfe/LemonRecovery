@@ -8,9 +8,35 @@
 var app = getApp()
 
 Page({
+  //初始化数据
   data: {
     index:0,
-    arr: ['本周六', '本周日']
+    doorTime:null,
+    yuyueAdress:null,
+    adressInfo:null,
+    cellYou:null,
+    phone:null,
+    remark:null,
+    startTime:new Date(),
+    region: ['观山湖区', '云岩区-大营坡'],
+    customItem: '全部'
+  },
+
+  //分享
+  onShareAppMessage: function (e) {
+    return {
+      title: '柠檬回收',
+      desc: '预约上门回收!',
+      path: '/pages/index/index?id=1001'
+    }
+  },
+
+  //预约地点
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    });
   },
 
   //提示框
@@ -27,6 +53,13 @@ Page({
 
     //上门时间
     var doorTime = e.detail.value.doorTime;
+    if (app.checkInput(doorTime)) {
+      that.showModal("上门时间不能为空!");
+      return;
+    }else{
+      if (!app.checkInput(e.detail.value.remark)) doorTime += ",备注:" + e.detail.value.remark;
+    }
+
     //预约地点
     var yuyueAdress = e.detail.value.yuyueAdress;
     if (app.checkInput(yuyueAdress)) {
@@ -69,6 +102,7 @@ Page({
         cudScriptName: 'Save',
         nameSpaceMap: {
           rows: [{
+            state: 0,                         //预约状态,0=未处理,1=已处理,2=不处理
             personalId: wx.getStorageSync("personalId"),  //用户id
             doorTime: doorTime,               //什么时间
             yuyueAdress: yuyueAdress,         //预约地点
@@ -82,6 +116,19 @@ Page({
     //发送请求
     app.request.reqPost(url,header,data,function(res){
       that.showModal("预约成功!");
+      that.closeForm(that);
+    });
+  },
+
+  //清空表单
+  closeForm:function(that){
+    that.setData({
+      doorTime: null,
+      yuyueAdress: null,
+      adressInfo: null,
+      cellYou: null,
+      phone: null,
+      remark:null,
     });
   },
 
@@ -89,7 +136,7 @@ Page({
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      doorTime: e.detail.value,
     })
   },
 
@@ -125,7 +172,11 @@ Page({
       function (res) {
         console.log(res);
         if (res.data.status === 1) {
-          if (res.data.rows == null) return;
+          if (res.data.rows == null){
+            console.log("null,null"+res);
+            that.loginRequest(that);
+            return;
+          };
           //提示
           wx.showToast({ title: res.data.message, icon: 'ok', duration: 2000, });
           //得到cookie
@@ -152,9 +203,7 @@ Page({
       });
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  //页面加载
   onLoad: function (options) {
     var that = this;
     //自动登录第一步，获取openid
@@ -206,6 +255,5 @@ Page({
         });
       }
     })
-  },
-  
+  }
 })

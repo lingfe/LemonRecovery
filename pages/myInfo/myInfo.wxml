@@ -1,0 +1,79 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-25
+ *   描述:  我的
+ * 
+ * */-->
+<view class="page">
+  <!-- 个人资料 start-->
+  <view class='huishou_bg'>
+    <view class='huishou_form'>
+      <!-- 头像 start-->
+      <view class='tx_img' bindtap='userinfoBtntap'>
+        <image src='{{userInfo.avatarUrl}}' class='tx_img_img'/>
+        <view class='tx_img_text'>{{userInfo.cnName}}</view>
+      </view>
+      <!-- 头像 end-->
+
+      <!-- 呼吸次数 start-->
+      <view class='breathing' bindtap='userinfoBtntap'>
+        <view class='breathing_breathing'>呼吸次数</view>
+        <view class='breathing_'>—</view>
+        <view class='breathing_text'>0次</view>
+      </view>
+      <!-- 呼吸次数 end-->
+
+      <!-- 柠檬积分 start-->
+      <view class='breathing'>
+        <view class='breathing_breathing'>柠檬积分</view>
+        <view class='breathing_'>—</view>
+        <view class='breathing_text'>0分</view>
+      </view>
+      <!-- 柠檬积分 end-->
+
+      <!-- 柠檬咨询 start-->
+      <view class='consultation'>
+        <view class='consultation_text' bindtap='consultationBtntap'>咨询柠檬</view>
+      </view>
+      <!-- 柠檬咨询 end-->
+    </view>
+  </view>
+  <!-- 个人资料 end-->
+
+  <!-- 新的伙伴 start-->
+  <view class='partner'>
+    <view class='partner_partner'>新的伙伴</view>
+    <view class='partner_partner'>
+      <swiper class='swiper' autoplay="true" circular="true" vertical="true" interval="3000" duration="1000">
+       <block wx:for="{{imgUrls}}">
+        <!-- <swiper-item style="height:0%;">      -->
+        <view class='partner_title'>
+          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' class='img'/>
+          <view class='partner_name'>蒋鹏{{index}}</view>
+          <view class='partner_right'>欢迎加入柠檬</view>
+        </view>
+        <!-- </swiper-item>  -->
+      </block> 
+      </swiper>
+    </view>
+
+  </view>
+  <!-- 新的伙伴 end-->
+  
+  <!-- 咨询柠檬 start-->
+  <view class='consultation_bottom'>
+    <view class='consultation_bottom_text'>功能拼命搭建中..</view>
+    <button class='consultation_bottom_btn' bindtap='consultationBtntap' form-type="submit">咨询柠檬</button>
+  </view>
+  <!-- 咨询柠檬 end-->
+</view>
+
+<!--二维码 start-->
+<view class='erweima_bg' wx:if="{{erweimaBl==true}}" bindtap='consultationBtntap'>
+  <view class='erweima'>
+    <image src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' class='erweima_img'/>
+    <view class='erweima_text'>点击二维码图片预览并保存到本地</view>
+    <view class='erweima_text'>添加柠檬公众号</view>
+  </view>
+</view>
+<!--二维码 end-->

@@ -1,0 +1,109 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-28
+ *   描述:  管理员
+ * 
+ * */-->
+<view class='page'>
+  <!-- tab切换  start -->
+  <view class="weui-tab">
+    <!-- 菜单  start -->
+    <view class="weui-navbar" style="border-bottom:none;">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#14BAC8;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
+    
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 未处理  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <!-- 预约数据 start -->
+        <view class='list' wx:if="{{list!=null}}">
+          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
+            <view class='item'>客户称呼: {{item.cellYou}}</view>
+            <view class='item'>联系电话: {{item.phone}}</view>
+            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
+            <view class='item'>预约地址: {{item.adressInfo}}</view>
+            <view class='item'>预约时间: {{item.doorTime}}</view>
+            <view class='item'>预约状态: 未处理</view>
+            <view class='item'>
+               <button class='btn' id="{{item.id}}" data-state="1" bindtap='Btntap'>处理</button>
+               <button class='btn' id="{{item.id}}" data-state="2" bindtap='Btntap'>不处理</button>
+            </view>
+          </view>
+        </view>
+
+        <view class='list' wx:else="{{list==null}}">
+          <view class='list_item'>
+            <view class='list_item_img' >
+              <view class='item_img'>没有预约哦(0_0)</view>
+            </view>
+          </view>
+        </view>
+        <!-- 预约数据 start -->
+      </view>
+      <!-- 未处理  end-->
+
+      <!-- 已处理  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <!-- 预约数据 start -->
+        <view class='list' wx:if="{{list!=null}}">
+          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
+            <view class='item'>客户称呼: {{item.cellYou}}</view>
+            <view class='item'>联系电话: {{item.phone}}</view>
+            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
+            <view class='item'>预约地址: {{item.adressInfo}}</view>
+            <view class='item'>预约时间: {{item.doorTime}}</view>
+            <view class='item'>预约状态: 已处理</view>
+          </view>
+        </view>
+
+        <view class='list' wx:else="{{list==null}}">
+          <view class='list_item'>
+            <view class='list_item_img' >
+              <view class='item_img'>没有预约哦(0_0)</view>
+            </view>
+          </view>
+        </view>
+        <!-- 预约数据 start -->
+      </view>
+      <!-- 已处理  end-->
+
+      <!-- 不处理  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <!-- 预约数据 start -->
+        <view class='list' wx:if="{{list!=null}}">
+          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
+            <view class='item'>客户称呼: {{item.cellYou}}</view>
+            <view class='item'>联系电话: {{item.phone}}</view>
+            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
+            <view class='item'>预约地址: {{item.adressInfo}}</view>
+            <view class='item'>预约时间: {{item.doorTime}}</view>
+            <view class='item'>预约状态: 不处理</view>
+          </view>
+        </view>
+
+        <view class='list' wx:else="{{list==null}}">
+          <view class='list_item'>
+            <view class='list_item_img' >
+              <view class='item_img'>没有预约哦(0_0)</view>
+            </view>
+          </view>
+        </view>
+        <!-- 预约数据 start -->
+      </view>
+      <!-- 不处理  end-->
+    </view>
+    <!-- 内容  end-->
+  </view>
+  <!-- tab切换  end-->
+</view>
+

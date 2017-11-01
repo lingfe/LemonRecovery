@@ -1,13 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/myInfo/myInfo",
+    "pages/logs/logs",
+    "pages/myInfo/myReservation/myReservation",
+    "pages/lemonRecovery/admin/admin"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarTitleText": "柠檬回收",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#C4C4C4",
@@ -19,19 +22,20 @@
         "text": "回收",
         "iconPath": "assets/images/index0.png",
         "selectedIconPath": "assets/images/index1.png"
-      },{
-        "pagePath": "pages/logs/logs",
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
         "text": "我的",
         "iconPath": "assets/images/my0.png",
         "selectedIconPath": "assets/images/my1.png"
       }
     ]
   },
-    "networkTimeout": {
-      "request": 100000,
-      "connectSocket": 10000,
-      "uploadFile": 150000,
-      "downloadFile": 10000
-    },
-    "debug": true
+  "networkTimeout": {
+    "request": 100000,
+    "connectSocket": 10000,
+    "uploadFile": 150000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

@@ -1,0 +1,145 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-28
+ *   描述:  管理员
+ * 
+ * */
+page{
+  background-color: #F7F8F3;
+}
+
+ /*菜单*/
+.select_text{
+  text-align: center;
+  color: #14BAC8;
+}
+.weui-navbar__title {
+  display:inline-block;
+  font-size:26rpx;
+  max-width:8em;
+  width:auto;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-wrap:normal;
+
+}
+.weui-navbar__item {
+  position:relative;
+  display:block;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  padding:13px 0;
+  text-align:center;
+  font-size:0;
+}
+
+/**内容**/
+.dahuo_neiro{
+  margin-left: 16rpx;
+  margin-top: 0rpx;
+  height: auto;
+}
+.neiro {
+  width: 716rpx;
+  background-color: #fff;
+  margin-top: 16rpx;
+  height: auto;
+  float: left;
+}
+
+.weui-navbar {
+display:-webkit-box;
+display:-webkit-flex;
+display:flex;
+position:absolute;
+z-index:500;
+background-color: #fff;
+top:0;
+width:100%;
+
+}
+
+.weui-tab__panel {
+  box-sizing:border-box;
+  height:49%;
+  padding-top:50px;
+  overflow:auto;
+  padding-bottom:57rpx; 
+  -webkit-overflow-scrolling:touch;
+  background-color: #E8EFEF;
+}
+
+.weui-navbar__slider {
+  position:absolute;
+  content:" ";
+  left:0;
+  bottom:0;
+  width:3em;
+  height:8rpx;
+  background-color:#1aad19;
+  -webkit-transition:-webkit-transform .3s;
+  transition:-webkit-transform .3s;
+  transition:transform .3s;
+  transition:transform .3s,-webkit-transform .3s;
+
+}
+
+/*预约数据*/
+ .list{
+  width: 100%;
+  height: auto;
+ }
+
+ .list_item{
+   width: 90%;
+   height: auto;
+   background-color:#fff;
+   font-size: 26rpx;
+   color: #666; 
+   margin:20rpx auto;
+   border: 1rpx solid #fff;
+   padding-bottom: 20rpx;
+ }
+ .item{
+  width: 90%;
+  margin-top:20rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+ }
+
+ .list_item_img{
+   width: 90%;
+   height: 240rpx;
+   font-size: 26rpx;
+   margin:20rpx auto;
+   border: 1rpx solid #F7F8F3;
+   /* background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%; */
+ }
+.item_img{
+  width: 90%;
+  margin-top:100rpx;
+  text-align: center;
+  color: #000;
+  margin-left: 20rpx;
+}
+
+/*处理按钮*/
+.btn{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0px auto;
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  background-color: #E9F01D;
+  border-radius: 10px;
+  color: #000;
+}
+.btn:active{
+  background-color: #EACF02;
+}

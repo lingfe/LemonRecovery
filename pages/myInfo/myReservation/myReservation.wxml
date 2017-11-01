@@ -1,0 +1,27 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-10-27
+ *   描述:  我的预约
+ * 
+ * */-->
+<view class='page'>
+  <!-- 预约数据 start -->
+  <view class='list' wx:if="{{list!=null}}">
+    <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
+      <view class='item'>您的称呼: {{item.cellYou}}</view>
+      <view class='item'>联系电话: {{item.phone}}</view>
+      <view class='item'>预约地点: {{item.yuyueAdress}}</view>
+      <view class='item'>预约地址: {{item.adressInfo}}</view>
+      <view class='item'>预约时间: {{item.doorTime}}</view>
+    </view>
+  </view>
+
+  <view class='list' wx:else="{{list==null}}">
+    <view class='list_item'>
+      <view class='list_item_img' >
+        <view class='item_img'>还没有回收记录哦(0_0)</view>
+      </view>
+    </view>
+  </view>
+  <!-- 预约数据 start -->
+</view>

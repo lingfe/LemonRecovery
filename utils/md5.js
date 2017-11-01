@@ -1,10 +1,3 @@
-/*
- * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
- * Digest Algorithm, as defined in RFC 1321.
- * Version 1.1 Copyright (C) Paul Johnston 1999 - 2002.
- * Code also contributed by Greg Holt
- * See http://pajhome.org.uk/site/legal.html for details.
- */
 
 /*
  * Add integers, wrapping at 2^32. This uses 16-bit operations internally
