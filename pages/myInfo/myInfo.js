@@ -36,6 +36,13 @@ Page({
     });
   },
 
+  //我的贡献
+  bindtabContribtion:function(e){
+    wx.navigateTo({
+      url: "/pages/myInfo/myContribution/myContribution",
+    });
+  },
+
   //是否显示二维码
   consultationBtntap:function(e){
     this.setData({

@@ -110,6 +110,7 @@ button::after {
 
 /*文本*/
 .huishou_text{
+  display: none;
   width: 90%;
   position: relative;
   top: 100rpx;
@@ -140,4 +141,51 @@ button::after {
 }
 .span:active{
   color: #aaa;
+}
+
+/*回收清单*/
+.recyclingList{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 100rpx;
+}
+.recyclingList_title{
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+}
+.recyclingList_title_img{
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50rpx;
+  position: absolute;
+  margin-top: 30rpx;
+  margin-left: 220rpx;
+}
+.recyclingList_content{
+  width: 100%;
+  height: auto;
+}
+.swiper {
+  display:block;
+  height:80px;
+}
+.content{
+  width: 90%;
+  margin: 0rpx auto;
+}
+.conten_content{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  font-size: 26rpx;
+  background-image:url(https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png);
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  margin-left: 90rpx;
 }

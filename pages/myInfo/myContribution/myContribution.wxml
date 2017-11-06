@@ -1,0 +1,63 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-03
+ *   描述:  我的贡献
+ * 
+ * */-->
+<view class='page'>
+  <!-- 我的贡献 总 览 start-->
+  <view class='myContribution'>
+    <view class='myContribution_title'>总 览</view>
+    <view class='myContribution___'></view>
+    <view class='myContribution_view'>
+      <view class='my'>资源贡献
+        <view class='my_feng'>360 斤</view>
+      </view>
+      <view class='my'>柠檬积分<view class='my_feng'>5 分</view></view>
+      <view class='my'>城市排名<view class='my_feng'>32 名</view></view>
+    </view>
+  </view>
+  <!-- 我的贡献 总 览 end-->
+
+  <!-- 我的贡献 分 类 start-->
+  <view class='myContribution'>
+    <view class='myContribution_title'>分 类</view>
+    <view class='myContribution___'></view>
+    <view class='myContribution_view'>
+      <view class='my'>旧衣
+        <view class='my_feng'>360 斤</view>
+      </view>
+      <view class='my'>废纸<view class='my_feng'>5 斤</view></view>
+      <view class='my'>其他<view class='my_feng'>32 斤</view></view>
+    </view>
+  </view>
+  <!-- 我的贡献 分 类 end-->
+  
+  <!-- 回收纪录 start -->
+  <view class='recyclingRecords'>
+    <view class='recyclingRecords_title'>回收纪录</view>
+    <view class='recyclingRecords_order'>
+      <view class='order_'>
+        <view class='order_data'>
+          <view class='data_datetime'>日期: 2017-11-03</view>
+          <view class='data_wen'>旧衣+1、废纸+1</view>
+        </view>
+        <view class='order_data' style='border-bottom:1rpx solid #aaa;'>
+          <view class='data_datetime'>单号: 123456789041</view>
+          <view class='data_wen'>其他+2、积分+4</view>
+        </view>
+      </view>
+      <view class='order_'>
+        <view class='order_data'>
+          <view class='data_datetime'>日期: 2017-11-03</view>
+          <view class='data_wen'>旧衣+1、废纸+1</view>
+        </view>
+        <view class='order_data' style='border-bottom:1rpx solid #aaa;'>
+          <view class='data_datetime'>单号: 123456789041</view>
+          <view class='data_wen'>其他+2、积分+4</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 回收纪录 end-->
+</view>

@@ -77,9 +77,9 @@
  margin-top: 15rpx;
 }
 
-/**/
+/*柠檬咨询*/
 .consultation{
-  display: none;
+  display: block;
   position: relative;
   top: 50rpx;
   left: 120rpx;
@@ -96,14 +96,43 @@
     color: #aaa;
 }
 
+/*我的预约,贡献*/
+.myContribution{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  position:relative;
+  top: 130rpx;
+}
+.myContribution_view{
+  width: 90%;
+  margin: 0rpx auto;
+  position: relative;
+  height: 150rpx;
+}
+.my{
+  position: relative;
+  width: 150rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  font-size: 26rpx;
+  text-align: center;
+  background-image:url(https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png);
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+}
+
 /*新的伙伴*/
 .partner{
-  display: none;
+  display: block;
   width: 100%;
   height: 500rpx;
   background-color: #fff;
   position:relative;
-  top: 130rpx;
+  top: 150rpx;
 }
 .partner_partner{
   position:relative;
@@ -242,4 +271,9 @@ button::after {
 .swiper{
   width: 100%;
   height:206px;
+}
+
+.span{
+  color: #14bac8;
+  text-decoration:underline;
 }

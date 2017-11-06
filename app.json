@@ -4,7 +4,8 @@
     "pages/myInfo/myInfo",
     "pages/logs/logs",
     "pages/myInfo/myReservation/myReservation",
-    "pages/lemonRecovery/admin/admin"
+    "pages/lemonRecovery/admin/admin",
+    "pages/myInfo/myContribution/myContribution"
   ],
   "window": {
     "backgroundTextStyle": "light",

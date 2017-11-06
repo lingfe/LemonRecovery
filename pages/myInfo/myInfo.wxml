@@ -15,13 +15,13 @@
       </view>
       <!-- 头像 end-->
 
-      <!-- 呼吸次数 start-->
+      <!-- 贡献资源 start-->
       <view class='breathing' bindtap='userinfoBtntap'>
-        <view class='breathing_breathing'>呼吸次数</view>
+        <view class='breathing_breathing'>贡献资源</view>
         <view class='breathing_'>—</view>
         <view class='breathing_text'>0次</view>
       </view>
-      <!-- 呼吸次数 end-->
+      <!-- 贡献资源 end-->
 
       <!-- 柠檬积分 start-->
       <view class='breathing'>
@@ -40,9 +40,19 @@
   </view>
   <!-- 个人资料 end-->
 
+  <!-- 我的贡献 start-->
+  <view class='myContribution'>
+    <view class='myContribution_view'>
+      <view class='my _Appointment'>我的预约</view>
+      <view class='my _l'>|</view>
+      <view class='my _Contribution' bindtap='bindtabContribtion'>我的贡献</view>
+    </view>
+  </view>
+  <!-- 我的贡献 end-->
+
   <!-- 新的伙伴 start-->
   <view class='partner'>
-    <view class='partner_partner'>新的伙伴</view>
+    <view class='partner_partner'>氧 气 榜 单</view>
     <view class='partner_partner'>
       <swiper class='swiper' autoplay="true" circular="true" vertical="true" interval="3000" duration="1000">
        <block wx:for="{{imgUrls}}">
@@ -50,13 +60,12 @@
         <view class='partner_title'>
           <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' class='img'/>
           <view class='partner_name'>蒋鹏{{index}}</view>
-          <view class='partner_right'>欢迎加入柠檬</view>
+          <view class='partner_right'>为<span class="span">贵阳市</span>贡献了<span class="span">360</span>斤可回收资源</view>
         </view>
         <!-- </swiper-item>  -->
       </block> 
       </swiper>
     </view>
-
   </view>
   <!-- 新的伙伴 end-->
   

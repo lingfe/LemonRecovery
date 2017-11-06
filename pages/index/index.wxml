@@ -55,6 +55,41 @@
   </view>
   <!-- 表单 end-->
 
+  <!-- 回收清单 start-->
+  <view class='recyclingList'>
+      <view class='recyclingList_title'>回收清单
+        <image class='recyclingList_title_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' />
+      </view>
+      <view class='recyclingLIst_content'>
+        <!-- 滑动菜单 start
+          autoplay        是否自动切换
+          indicator-dots  是否显示指示点
+          circular        是否采用衔接滑动
+          interval        自动切换时间间隔
+          duration        滑动动画时长
+          vertical        滑动方向是否为纵向
+         -->
+        <swiper class='swiper' autoplay="true" indicator-dots="true" circular="true"  interval="3000" duration="1000">
+          <swiper-item>
+            <view class='content'>
+              <view class='conten_content'>衣服</view>
+              <view class='conten_content'>裤子</view>
+              <view class='conten_content'>鞋子</view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class='content'>
+              <view class='conten_content'>衣服</view>
+              <view class='conten_content'>裤子</view>
+              <view class='conten_content'>鞋子</view>
+            </view>
+          </swiper-item>
+        </swiper>
+        <!-- 滑动菜单 end -->
+      </view>
+  </view>
+  <!-- 回收清单 end -->
+
   <!-- 注意事项  start-->
   <view class='huishou_text'>
     <view class='text_top'>注意事项</view>
