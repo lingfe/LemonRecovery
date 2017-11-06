@@ -12,7 +12,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:null
+    list:null,
+    cst:false,      //隐藏
+  },
+
+  //显示或隐藏表单
+  CalculationlistBindtap:function(e){
+    this.setData({
+      cst:this.data.cst==false?true:false
+    });
   },
 
   /**
