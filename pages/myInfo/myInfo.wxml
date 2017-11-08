@@ -43,7 +43,7 @@
   <!-- 我的贡献 start-->
   <view class='myContribution'>
     <view class='myContribution_view'>
-      <view class='my _Appointment'>我的预约</view>
+      <view class='my _Appointment' bindtap='bindtapReservation'>我的预约</view>
       <view class='my _l'>|</view>
       <view class='my _Contribution' bindtap='bindtabContribtion'>我的贡献</view>
     </view>

@@ -1,0 +1,75 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-08
+ *   描述:  兑换商品
+ * 
+ * */-->
+<view class='page'>
+  <!-- 我的订单 start -->
+  <view class='myorder'>
+    <view class='myorder_list'>
+      <view class='list_item'>
+        <!-- 参数  start -->
+        <view class='item_img'>
+          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+          <view class='text'>
+            <view class='text_title'>正品得力A试纸</view>
+            <view class='text_proices'>
+            <image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+            <span class="span">76</span></view>
+            <view class='text_shengyu'>剩余: 100</view>
+            <view class='text_input'>
+              <view class='input_js' bindtap='bindtapJian'>-</view>
+              <view class='input_js'>{{num}}</view>
+              <view class='input_js' bindtap='bindtapJia'>+</view>
+            </view>
+          </view>
+        </view>
+        <!-- 参数  end -->
+      </view>
+      <view class='list_time'>
+        <!-- 使用规则 start -->
+        <view class='remak'>
+          <view class='time_text'>使用规则:</view>
+          <view class='time_text'>1.水电费水电费水电费是</view>
+          <view class='time_text'>2.沙发斯蒂芬水电费水电费水电费水电费第三方士大夫是的</view>
+        </view>
+        <!-- 使用规则 end -->
+
+        <!-- 表单 start -->
+        <view class='find_menu'>
+          <view class='menu'>
+            <view class='menu_title'>联系人</view>
+            <view class='menu_input'>
+                <input class='input' placeholder='请输入联系人'></input>
+            </view>
+          </view>
+          <view class='menu' bindtap='bindtapLemonCommonweal'>
+            <view class='menu_title'>联系电话</view>
+            <view class='menu_input'>
+                <input class='input' placeholder='请输入联系电话'></input>
+            </view>
+          </view>
+          <view class='menu'>
+            <view class='menu_title'>详细地址</view>
+            <view class='menu_input'>
+                <input class='input' placeholder='请输入详细地址'></input>
+            </view>
+          </view>
+          <view class='menu'>
+            <button class='form_last' form-type="submit">确认兑换</button>
+          </view>
+        </view>
+        <!-- 表单 end -->
+
+        <view class='time_time'>
+          2017-11-08 13:41  12345678901
+        </view>
+        <view class='time_coum'>
+          合计：<image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>76
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的订单 end -->
+</view>

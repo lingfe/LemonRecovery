@@ -1,0 +1,46 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-07
+ *   描述:  申领旧衣
+ * 
+ * */-->
+<view class='page'>
+  <view class='find_img'>
+    <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+  </view>
+  <view class='find_menu'>
+    <view class='menu'>
+       <view class='menu_title'>联系人</view>
+       <view class='menu_input'>
+          <input class='input' placeholder='请输入联系人'></input>
+       </view>
+    </view>
+    <view class='menu' bindtap='bindtapLemonCommonweal'>
+       <view class='menu_title'>联系电话</view>
+       <view class='menu_input'>
+          <input class='input' placeholder='请输入联系电话'></input>
+       </view>
+    </view>
+    <view class='menu'>
+       <view class='menu_title'>详细地址</view>
+       <view class='menu_input'>
+          <input class='input' placeholder='请输入详细地址'></input>
+       </view>
+    </view>
+    <view class='menu'>
+       <view class='menu_title'>申请原因</view>
+       <view class='menu_input'>
+          <input class='input' placeholder='请输入申请原因'></input>
+       </view>
+    </view>
+    <view class='menu'>
+       <view class='menu_title'>需求说明</view>
+       <view class='menu_input'>
+          <input class='input' placeholder='请输入需求说明'></input>
+       </view>
+    </view>
+    <view class='menu'>
+      <button class='form_last' form-type="submit">登记预约</button>
+    </view>
+  </view>
+</view>

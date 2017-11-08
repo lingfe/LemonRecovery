@@ -51,6 +51,26 @@
         </view>
       </view>
     </view>
+
+    <view class='list_item'>
+      <view class='item'>
+        <view class='item_text'>订单编号: 4564341546465</view>
+      </view>
+      <view class='item'>
+        <view class='item_text'>下单时间: 2017-11-06</view>
+        <view class='item_static'>
+          <text class='item_static_text'>已完成</text>
+        </view>
+      </view>
+      <view class='item_border'></view>
+      <view class='item'>
+        <view class='item_text'>您的称呼: 李秀珍</view>
+        <view class='item_text'>联系电话: 1231231231</view>
+        <view class='item_text'>预约地点: 谁谁谁水水水水水水水水</view>
+        <view class='item_text'>预约地址: 是是水水水水水水水水水水水水</view>
+        <view class='item_text'>预约时间: 2017-11-06</view>
+      </view>
+    </view>
   </view>
   <!-- 订单数据 end-->
   <!-- 预约数据 end -->

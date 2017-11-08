@@ -5,7 +5,13 @@
     "pages/logs/logs",
     "pages/myInfo/myReservation/myReservation",
     "pages/lemonRecovery/admin/admin",
-    "pages/myInfo/myContribution/myContribution"
+    "pages/myInfo/myContribution/myContribution",
+    "pages/findPage/findPage",
+    "pages/findPage/lemonCommonweal/lemonCommonweal",
+    "pages/findPage/lemonCommonweal/oldClothes/oldClothes",
+    "pages/findPage/myPoints/myPoints",
+    "pages/findPage/myPoints/pointsOrder/pointsOrder",
+    "pages/findPage/myPoints/exchange/exchange"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +29,12 @@
         "text": "回收",
         "iconPath": "assets/images/index0.png",
         "selectedIconPath": "assets/images/index1.png"
+      },
+      {
+        "pagePath": "pages/findPage/findPage",
+        "text": "发现",
+        "iconPath": "assets/images/my0.png",
+        "selectedIconPath": "assets/images/my1.png"
       },
       {
         "pagePath": "pages/myInfo/myInfo",

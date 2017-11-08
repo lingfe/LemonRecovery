@@ -1,0 +1,57 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-07
+ *   描述:  发现
+ * 
+ * */
+ page{
+   background-color: #E8EFEF;
+ }
+
+ .find_img{
+   width: 100%;
+   height: auto;
+ }
+ .img{
+   width: 100%;
+   height: 350rpx;
+ }
+ .find_menu{
+  width: 100%;
+  margin-top: 20rpx;
+ }
+ .menu{
+   width: 90%;
+   height: 130rpx;
+   margin: auto;
+   background-color: #fff;
+   margin-bottom: 20rpx;
+   box-shadow: 2px 2px 5px #888888;
+   border-radius: 10rpx;
+ }
+ .menu:active{
+   box-shadow: 2px 2px 5px #aaa;
+ }
+ .menu_img{
+   width: 100rpx;
+   height: 100rpx;
+   border-radius: 30px;
+   margin-left: 20rpx;
+   margin-top: 15rpx;
+   float: left;
+ }
+ .menu_text{
+   height: 130rpx;
+   line-height: 130rpx;
+   font-size: 26rpx;
+   margin-left: 20rpx;
+   float: left;
+ }
+ .menu_v{
+  height: 130rpx;
+  line-height: 130rpx;
+   font-size: 70rpx;
+   color: #aaa;
+   margin-right: 20rpx;
+   float: right;
+ }

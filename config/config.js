@@ -17,4 +17,5 @@ export default {
 	domainImage: "https://static.daho.club/static/upload/",
   //登录，请求，代理
   login_sys: 'https://sys.daho.club/wx/',
+  
 }

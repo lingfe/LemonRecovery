@@ -1,0 +1,179 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-08
+ *   描述:  兑换商品
+ * 
+ * */
+  page{
+   background-color: #E8EFEF;
+ }
+
+ .myorder{
+   width: 100%;
+   height: auto;
+ }
+ .myorder_list{
+   width: 94%;
+   margin: auto;
+   height: auto;
+ }
+ .list_item{
+   width: 100%;
+   height: 310rpx;
+   margin-top: 20rpx;
+ }
+ .list_time{
+   width: 96%;
+   height: 50rpx;
+   margin-top: 10rpx;
+   border-top: 1rpx solid #aaa;
+   margin-left: 10rpx;
+ }
+ .item_img{
+   width: 100%;
+   height: auto;
+   float: left;
+ }
+ .time_time{
+   width: 70%;
+   height: 50rpx;
+   font-size: 20rpx;
+   line-height: 50rpx;
+   float: left;
+ }
+ .time_coum{
+   width: 26%;
+   height: 50rpx;
+   line-height: 50rpx;
+   float: right;
+   font-size: 26rpx;
+   text-align: center;
+ }
+ .img{
+   width: 60%;
+   margin-top: 10rpx;
+   margin-left: 10rpx;
+   height: 300rpx;
+   float: left;
+ }
+ .text{
+   width: 30%;
+   height: 200rpx;
+   float: left;
+ }
+ .text_title{
+   font-size: 26rpx;
+   height: 100rpx;
+   line-height: 100rpx;
+   margin-left: 20rpx;
+  overflow: hidden; /**自动隐藏文字*/
+  text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+  white-space: nowrap; /**强制不换行*/
+ }
+ .text_proices{
+   width: 80%;
+   text-align: center;
+   font-size: 20rpx;
+   height: 50rpx;
+   line-height: 50rpx;
+ }
+ .span{
+   font-size: 30rpx;
+   margin-right: 20rpx;
+ }
+ .time_coum_img{
+     width: 10%;
+  height: 26rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+ }
+ .text_shengyu{
+   font-size: 20rpx;
+   width: 80%;
+   text-align: center;
+   height: 50rpx;
+   line-height: 50rpx;
+ }
+
+ .text_input{
+      font-size: 20rpx;
+   width: 80%;
+   text-align: center;
+   height: 50rpx;
+   line-height: 50rpx;
+   margin-left: 30rpx;
+ }
+ .input_js{
+   width: 30%;
+   height: 50rpx;
+   float: left;
+   border: 1rpx solid #aaa;
+ }
+
+ /*使用规则*/
+ .remak{
+   font-size: 26rpx;
+   margin-top: 30rpx;
+ }
+ .time_text{
+   margin-top: 10rpx;
+ }
+
+ /*表单*/
+ .find_menu{
+  width: 100%;
+  margin-top: 20rpx;
+ }
+ .menu{
+   height: 100rpx;
+ }
+ .menu_title{
+   width: 20%;
+    height: 100rpx;
+   line-height: 100rpx;
+   font-size: 26rpx;
+   float: left;
+ }
+ .menu_input{
+   width: 70%;
+   margin-top: 20rpx;
+   margin-left: 50rpx;
+   font-size: 26rpx;
+   float: left;
+   padding-bottom: 10rpx;
+   border-bottom: 1rpx solid #aaa;
+ }
+
+/*按钮*/
+ .form_last{
+  position: relative;
+  width: 84%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0px auto;
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: #EACF02;
+  color: #fff;
+}
+
+.form_last:active{
+  background-color: #EDE03A;
+}
+
+button::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0px solid #fff;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}

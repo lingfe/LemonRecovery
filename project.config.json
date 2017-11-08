@@ -4,15 +4,24 @@
 		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
-		"minified": true
+		"minified": true,
+		"newFeature": true
 	},
-	"compileType": "weapp",
+	"compileType": "miniprogram",
 	"libVersion": "1.5.3",
 	"appid": "wxc8884c9a5132aa7a",
 	"projectname": "LemonRecovery",
 	"condition": {
-		"weapp": {
-			"current": 1,
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -37,16 +46,38 @@
 					"name": "我的贡献",
 					"pathName": "pages/myInfo/myContribution/myContribution",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的积分",
+					"pathName": "pages/myInfo/myPoints/myPoints",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/findPage/findPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "申领旧衣",
+					"pathName": "pages/findPage/lemonCommonweal/oldClothes/oldClothes",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "兑换订单",
+					"pathName": "pages/findPage/myPoints/pointsOrder/pointsOrder",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "兑换商品",
+					"pathName": "pages/findPage/myPoints/exchange/exchange",
+					"query": ""
 				}
 			]
-		},
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
 		}
 	}
 }

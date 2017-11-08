@@ -15,6 +15,13 @@ Page({
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
     ],
     admin: ["oh4300CxufSClVEil0k7xNy24P5A", "oNWj80C6zKPwL2_muS08iIVtGhkA", "oh4300DFZdBeIGOoVKQK9OFuyPps", "oh4300BzivzPyMq9Uk05pF_GaVoc","oh4300LBMs6n0ylQ1H3XK1jC90YU"]
+  }, 
+
+  //我的预约
+  bindtapReservation:function(e){
+    wx.navigateTo({
+      url: "/pages/myInfo/myReservation/myReservation",
+    })
   },
 
   //我的预约

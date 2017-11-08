@@ -1,0 +1,20 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-07
+ *   描述:  柠檬公益
+ * 
+ * */-->
+<view class='page'>
+  <view class='find_menu'>
+    <view class='menu'>
+       <image class='menu_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+       <view class='menu_text'>柠檬公益动态</view>
+       <view class='menu_v'>></view>
+    </view>
+    <view class='menu' bindtap='bindtapOldClothes'>
+       <image class='menu_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+       <view class='menu_text'>申领旧衣</view>
+       <view class='menu_v'>></view>
+    </view>
+  </view>
+</view>

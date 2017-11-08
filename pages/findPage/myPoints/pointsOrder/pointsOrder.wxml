@@ -1,0 +1,35 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-08
+ *   描述:  兑换订单
+ * 
+ * */-->
+<view class='page'>
+  <!-- 我的订单 start -->
+  <view class='myorder'>
+    <view class='myorder_title'>我的订单</view>
+    <view class='myorder_list'>
+      <view class='list_item'>
+        <view class='item_img'>
+          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+          <view class='text'>
+            <view class='text_title'>正品得力A试纸</view>
+            <view class='text_proices'><span class="span">36</span> x 2</view>
+          </view>
+        </view>
+        <view class='item_btn'>
+          <view class='btn'>确认收货</view>
+        </view>
+      </view>
+      <view class='list_time'>
+        <view class='time_time'>
+          2017-11-08 13:41  12345678901
+        </view>
+        <view class='time_coum'>
+          合计<image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>76
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的订单 end -->
+</view>

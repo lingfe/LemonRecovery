@@ -1,0 +1,28 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-07
+ *   描述:  发现
+ * 
+ * */-->
+<view class='page'>
+  <view class='find_img'>
+    <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+  </view>
+  <view class='find_menu'>
+    <view class='menu'>
+       <image class='menu_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+       <view class='menu_text'>关于柠檬</view>
+       <view class='menu_v'>></view>
+    </view>
+    <view class='menu' bindtap='bindtapLemonCommonweal'>
+       <image class='menu_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+       <view class='menu_text'>柠檬公益</view>
+       <view class='menu_v'>></view>
+    </view>
+    <view class='menu' bindtap='bindtapPoints'>
+       <image class='menu_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+       <view class='menu_text'>积分兑换</view>
+       <view class='menu_v'>></view>
+    </view>
+  </view>
+</view>
