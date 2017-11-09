@@ -58,7 +58,7 @@
   <!-- 回收清单 start-->
   <view class='recyclingList'>
       <view class='recyclingList_title'>回收清单
-        <image class='recyclingList_title_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' />
+        <image class='recyclingList_title_img' src='/assets/images/index/whao.png' />
       </view>
       <view class='recyclingLIst_content'>
         <!-- 滑动菜单 start
@@ -72,16 +72,34 @@
         <swiper class='swiper' autoplay="true" indicator-dots="true" circular="true"  interval="3000" duration="1000">
           <swiper-item>
             <view class='content'>
-              <view class='conten_content'>衣服</view>
-              <view class='conten_content'>裤子</view>
-              <view class='conten_content'>鞋子</view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/yifu.png' />
+                <view class='content_text'>衣服</view>
+              </view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/feizhi.png' />
+                <view class='content_text'>废纸</view>
+              </view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/xiezi.png' />
+                <view class='content_text'>鞋子</view>
+              </view>
             </view>
           </swiper-item>
           <swiper-item>
             <view class='content'>
-              <view class='conten_content'>衣服</view>
-              <view class='conten_content'>裤子</view>
-              <view class='conten_content'>鞋子</view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/baobao.png' />
+                <view class='content_text'>包包</view>
+              </view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/chuangdan.png' />
+                <view class='content_text'>床单</view>
+              </view>
+              <view class='conten_content'>
+                <image class='content_img' src='/assets/images/index/slp.png' />
+                <view class='content_text'>塑料瓶</view>
+              </view>
             </view>
           </swiper-item>
         </swiper>

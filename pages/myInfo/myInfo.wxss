@@ -117,9 +117,6 @@
   line-height: 110rpx;
   font-size: 26rpx;
   text-align: center;
-  background-image:url(https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png);
-  background-size:100% 100%;
-  background-repeat: no-repeat;
   float: left;
   margin-top: 20rpx;
   margin-left: 50rpx;
@@ -276,4 +273,20 @@ button::after {
 .span{
   color: #14bac8;
   text-decoration:underline;
+}
+
+/*图片*/
+.content_img{
+  width: 110rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+.content_text{
+  width: 110rpx;
+  font-size: 26rpx;
+  position: relative;
+  top:-80rpx;
+  left: 30rpx;
+  color: #666;
+  text-align: center;
 }

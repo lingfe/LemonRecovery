@@ -10,11 +10,18 @@
     <view class='myContribution_title'>总 览</view>
     <view class='myContribution___'></view>
     <view class='myContribution_view'>
-      <view class='my'>资源贡献
+      <view class='my'>
+        <view class='content_text'>资源贡献</view>
         <view class='my_feng'>360 斤</view>
       </view>
-      <view class='my'>柠檬积分<view class='my_feng'>5 分</view></view>
-      <view class='my'>城市排名<view class='my_feng'>32 名</view></view>
+      <view class='my_border'></view>
+      <view class='my'>
+        <view class='content_text'>柠檬积分</view>
+        <view class='my_feng'>5 分</view></view>
+      <view class='my_border'></view>
+      <view class='my'>
+        <view class='content_text'>城市排名</view>
+        <view class='my_feng'>32 名</view></view>
     </view>
   </view>
   <!-- 我的贡献 总 览 end-->
@@ -24,11 +31,21 @@
     <view class='myContribution_title'>分 类</view>
     <view class='myContribution___'></view>
     <view class='myContribution_view'>
-      <view class='my'>旧衣
+      <view class='my'>
+        <image class='content_img' src='/assets/images/index/yifu.png' />
+        <view class='content_text'>旧衣</view>
         <view class='my_feng'>360 斤</view>
       </view>
-      <view class='my'>废纸<view class='my_feng'>5 斤</view></view>
-      <view class='my'>其他<view class='my_feng'>32 斤</view></view>
+      <view class='my_border'></view>
+      <view class='my'>
+        <image class='content_img' src='/assets/images/index/feizhi.png' />
+        <view class='content_text'>废纸</view>
+        <view class='my_feng'>5 斤</view></view>
+      <view class='my_border'></view>
+      <view class='my'>
+        <image class='content_img' src='/assets/images/index/whao.png' />
+        <view class='content_text'>其他</view>
+        <view class='my_feng'>32 斤</view></view>
     </view>
   </view>
   <!-- 我的贡献 分 类 end-->

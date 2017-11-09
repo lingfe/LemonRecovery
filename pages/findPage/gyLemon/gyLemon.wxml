@@ -1,0 +1,122 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-09
+ *   描述:  关于柠檬
+ * 
+ * */-->
+<view class='page'>
+  <image class='top_logo' src='/assets/images/find/gylemon/LOGO.png'></image>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，福建省考虑到福建省砥砺奋进，是放假了的空间防守打法接收打开附件是，。是的发送到解放路时代峻峰。水电费看胜多负少fs.sdfs。
+  </view>
+  <view class="content_border"></view>
+  <view class='img_text'>
+    <view class='img_text2'>
+      <image class='content_img' src='/assets/images/index/yifu.png' />
+      <view class='content_text'>旧衣</view>
+    </view>
+  </view>
+
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+    <view class='img_text2'>
+      <view class='content_text'>柠 檬 处 理 - 旧 衣</view>
+    </view>
+  </view>
+
+  <view class='content2'>环保再生 - 约70%</view>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+      <image class='content_img2' src='/assets/images/find/gylemon/gyzz1.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/gyzz2.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/gyzz3.jpg' />
+  </view>
+
+  <view class='content2'>公益捐赠 - 约10%</view>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+      <image class='content_img2' src='/assets/images/find/gylemon/gyjz1.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/gyjz2.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/gyjz3.jpg' />
+  </view>
+
+  <view class='content2'>旧衣出口 - 约15%</view>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+      <image class='content_img2' src='/assets/images/find/gylemon/ckfz1.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/ckfz2.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/ckfz3.jpg' />
+  </view>
+
+  <view class='content2'>工艺再造 - 约5%</view>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <!-- 拒收清单 start-->
+  <view class='jushou'>
+    <image class='jushou_img' src='/assets/images/find/gylemon/no.png' />
+    <view class='jushou_text'>拒收清单: 内衣/内裤/袜子</view>
+  </view>
+  <!-- 拒收清单 end  -->
+
+  <!-- 废纸 start  -->
+  <view class="content_border"></view>
+  <view class='img_text'>
+    <view class='img_text2'>
+      <image class='content_img' src='/assets/images/index/feizhi.png' />
+      <view class='content_text'>废纸</view>
+    </view>
+  </view>
+  <!-- 废纸 end  -->
+
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，福建省考虑到福建省砥砺奋进，是放假了的空间防守打法接收打开附件是，。是的发送到解放路时代峻峰。水电费看胜多负少fs.sdfs。
+  </view>
+
+  <view class='img_text'>
+    <view class='img_text2'>
+      <view class='content_text'>柠 檬 处 理 - 废 纸</view>
+    </view>
+  </view>
+
+  <view class='content2'>制造浆 环保再生</view>
+  <view class='content'>
+    是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+      <image class='content_img2' src='/assets/images/find/gylemon/hbzs1.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/hbzs2.jpg' />
+      <image class='content_img2' src='/assets/images/find/gylemon/hbzs3.jpg' />
+  </view>
+
+  <!-- 拒收清单 start-->
+  <view class='jushou2'>
+    <image class='jushou_img' src='/assets/images/find/gylemon/no.png' />
+    <view class='jushou_text'>拒收清单: 卫生纸/装过液体的包装纸</view>
+  </view>
+  <!-- 拒收清单 end  -->
+
+  <view class='content_bottom'>
+    申明: 是否打开啦设计费拉开始减肥开始，反馈老实交代付了款第三方是，石佛寺大家反馈了束带结发，适得府君书了见风使舵发，
+  </view>
+
+  <view class='img_text'>
+    <view class='img_text2'>
+      <view class='content_text'>柠 檬 - 城 市 开 始 呼 吸</view>
+    </view>
+  </view>
+</view>

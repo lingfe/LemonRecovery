@@ -11,7 +11,9 @@
     "pages/findPage/lemonCommonweal/oldClothes/oldClothes",
     "pages/findPage/myPoints/myPoints",
     "pages/findPage/myPoints/pointsOrder/pointsOrder",
-    "pages/findPage/myPoints/exchange/exchange"
+    "pages/findPage/myPoints/exchange/exchange",
+    "pages/findPage/lemonCommonweal/gyDynamic/gyDynamic",
+    "pages/findPage/gyLemon/gyLemon"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,8 +35,8 @@
       {
         "pagePath": "pages/findPage/findPage",
         "text": "发现",
-        "iconPath": "assets/images/my0.png",
-        "selectedIconPath": "assets/images/my1.png"
+        "iconPath": "assets/images/find0.png",
+        "selectedIconPath": "assets/images/find1.png"
       },
       {
         "pagePath": "pages/myInfo/myInfo",

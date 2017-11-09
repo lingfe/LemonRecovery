@@ -28,18 +28,23 @@
   <view class='square'>
     <view class='square_title'>兑换广场</view>
     <view class='square_content'>
+      <navigator url='/pages/findPage/myPoints/exchange/exchange'>
       <view class='content'>
         <image class='content_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
         <view class='content_title'>正品得力A试纸</view>
-        <view class='content_prices'><image class='content_prices_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>32</view>
+        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>32</view>
         <view class='content_text'>剩余: 100</view>
       </view>
+      </navigator>
+      
+      <navigator url='/pages/findPage/myPoints/exchange/exchange'>
       <view class='content'>
         <image class='content_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
         <view class='content_title'>正品得力A试纸</view>
-        <view class='content_prices'><image class='content_prices_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>32</view>
+        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>32</view>
         <view class='content_text'>剩余: 100</view>
       </view>
+      </navigator>
     </view>
   </view>
   <!-- 兑换广场 end -->

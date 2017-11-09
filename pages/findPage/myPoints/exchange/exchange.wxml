@@ -15,7 +15,7 @@
           <view class='text'>
             <view class='text_title'>正品得力A试纸</view>
             <view class='text_proices'>
-            <image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+            <image class='time_coum_img' src='/assets/images/find/gy.png'></image>
             <span class="span">76</span></view>
             <view class='text_shengyu'>剩余: 100</view>
             <view class='text_input'>
@@ -66,7 +66,7 @@
           2017-11-08 13:41  12345678901
         </view>
         <view class='time_coum'>
-          合计：<image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>76
+          合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>76
         </view>
       </view>
     </view>

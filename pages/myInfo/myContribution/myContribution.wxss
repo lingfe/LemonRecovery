@@ -40,20 +40,40 @@
 
 .my{
   position: relative;
-  width: 150rpx;
+  width: 160rpx;
   height: 110rpx;
   font-size: 26rpx;
   text-align: center;
-  background-image:url(https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png);
-  background-size:100% 100%;
-  background-repeat: no-repeat;
   float: left;
   margin-top: 20rpx;
-  margin-left: 50rpx;
+  margin-left: 35rpx;
 }
 .my_feng{
   margin-top: 40rpx;
 }
+.my_border{
+  border-left: 1rpx solid #aaa;
+  height: 80rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+}
+
+/*图片*/
+.content_img{
+  width: 50rpx;
+  height: 42rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+.content_text{
+  width: auto;
+  font-size: 26rpx;
+  position: relative;
+  color: #666;
+  text-align: center;
+}
+
 
 /*回收纪录*/
 .recyclingRecords{

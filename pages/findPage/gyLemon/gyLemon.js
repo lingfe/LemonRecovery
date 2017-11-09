@@ -1,7 +1,7 @@
 /**  
  *   作者:  lingfe 
- *   时间:  2017-11-07
- *   描述:  柠檬公益
+ *   时间:  2017-11-09
+ *   描述:  关于柠檬
  * 
  * */
 var app = getApp();
@@ -13,20 +13,6 @@ Page({
    */
   data: {
   
-  },
-
-  //柠檬公益动态
-  bindtapGyDynamic:function(e){
-    wx.navigateTo({
-      url: "/pages/findPage/lemonCommonweal/gyDynamic/gyDynamic"
-    })
-  },
-
-  //申领旧衣
-  bindtapOldClothes:function(e){
-    wx.navigateTo({
-      url: "/pages/findPage/lemonCommonweal/oldClothes/oldClothes"
-    });
   },
 
   /**

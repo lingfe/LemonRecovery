@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -36,7 +36,7 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "sy",
 					"pathName": "pages/index/index",
 					"query": ""
@@ -48,9 +48,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "我的积分",
-					"pathName": "pages/myInfo/myPoints/myPoints",
+					"pathName": "pages/findPage/myPoints/myPoints",
 					"query": ""
 				},
 				{
@@ -75,6 +75,18 @@
 					"id": 8,
 					"name": "兑换商品",
 					"pathName": "pages/findPage/myPoints/exchange/exchange",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dotai",
+					"pathName": "pages/findPage/lemonCommonweal/gyDynamic/gyDynamic",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "关于柠檬",
+					"pathName": "pages/findPage/gyLemon/gyLemon",
 					"query": ""
 				}
 			]

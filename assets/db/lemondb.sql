@@ -74,6 +74,9 @@ DROP TABLE IF EXISTS convertibleOrder;
 CREATE TABLE convertibleOrder(
 	id VARCHAR(32) NOT NULL COMMENT '兑换订单表id标识',
 	`personalId` VARCHAR(255) NOT NULL COMMENT '用户id',
+	contactPeople VARCHAR(255) NOT NULL COMMENT '联系人',
+	phone VARCHAR(255) NOT NULL COMMENT '联系电话',
+	`adressInfo` VARCHAR(255) NOT NULL COMMENT '详细地址',
 	imgUrl VARCHAR(255) NOT NULL COMMENT '商品图片',
 	title VARCHAR(255) NOT NULL COMMENT '商品标题',
 	integral INT(11) NOT NULL COMMENT '积分',

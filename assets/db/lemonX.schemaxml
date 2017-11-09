@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">lemondb</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="applyoldclothes" view="standard">
+<left>307</left>
+<top>25</top>
+<width>264</width>
+<height>308</height>
+<sql_create_table>CREATE TABLE `applyoldclothes` (
+  `id` varchar(32) NOT NULL COMMENT '申领旧衣表id标识',
+  `personalId` varchar(255) NOT NULL COMMENT '用户id',
+  `contactPeople` varchar(255) NOT NULL COMMENT '联系人',
+  `phone` varchar(255) NOT NULL COMMENT '联系电话',
+  `adressInfo` varchar(255) NOT NULL COMMENT '详细地址',
+  `applyReason` varchar(255) NOT NULL COMMENT '申请原因',
+  `demandExplain` varchar(255) NOT NULL COMMENT '需求说明',
+  `state` int(11) DEFAULT '0' COMMENT '申领旧衣状态,0..',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="convertiblecommodity" view="standard">
+<left>55</left>
+<top>48</top>
+<width>194</width>
+<height>279</height>
+<sql_create_table>CREATE TABLE `convertiblecommodity` (
+  `id` varchar(32) NOT NULL COMMENT '可兑换商品表id标识',
+  `imgUrl` varchar(255) NOT NULL COMMENT '商品图片',
+  `title` varchar(255) NOT NULL COMMENT '商品标题',
+  `integral` int(11) NOT NULL COMMENT '积分',
+  `surplus` int(11) NOT NULL COMMENT '剩余(件/个/份)',
+  `state` int(11) DEFAULT '0' COMMENT '可兑换商品状态,0..',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="convertibleorder" view="standard">
+<left>754</left>
+<top>404</top>
+<width>221</width>
+<height>308</height>
+<sql_create_table>CREATE TABLE `convertibleorder` (
+  `id` varchar(32) NOT NULL COMMENT '兑换订单表id标识',
+  `personalId` varchar(255) NOT NULL COMMENT '用户id',
+  `imgUrl` varchar(255) NOT NULL COMMENT '商品图片',
+  `title` varchar(255) NOT NULL COMMENT '商品标题',
+  `integral` int(11) NOT NULL COMMENT '积分',
+  `totalIntegral` int(11) NOT NULL COMMENT '合计积分',
+  `number` int(11) NOT NULL COMMENT '兑换数量',
+  `state` int(11) DEFAULT '0' COMMENT '兑换订单状态,0=已提交,1=已完成,2..',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="lemonrecovery" view="standard">
+<left>699</left>
+<top>17</top>
+<width>308</width>
+<height>308</height>
+<sql_create_table>CREATE TABLE `lemonrecovery` (
+  `id` varchar(32) NOT NULL COMMENT '预约表id标识',
+  `personalId` varchar(255) NOT NULL COMMENT '用户id',
+  `doorTime` varchar(255) NOT NULL COMMENT '上门时间',
+  `yuyueAdress` varchar(255) NOT NULL COMMENT '预约地点',
+  `adressInfo` varchar(255) NOT NULL COMMENT '详细地址',
+  `cellYou` varchar(255) NOT NULL COMMENT '对您称呼',
+  `phone` varchar(255) NOT NULL COMMENT '联系电话',
+  `state` int(11) DEFAULT '0' COMMENT '预约状态,0=未处理,1=已处理,2=不处理,3=已取消',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="mycontribution" view="standard">
+<left>374</left>
+<top>399</top>
+<width>271</width>
+<height>308</height>
+<sql_create_table>CREATE TABLE `mycontribution` (
+  `id` varchar(32) NOT NULL COMMENT '我的贡献表id标识',
+  `personalId` varchar(255) NOT NULL COMMENT '用户id',
+  `resourceContribution` float DEFAULT '0' COMMENT '资源贡献(斤)',
+  `lemonIntegral` int(11) DEFAULT '0' COMMENT '柠檬积分',
+  `cityRanking` int(11) DEFAULT '0' COMMENT '城市排名',
+  `usedClothes` float DEFAULT '0' COMMENT '旧衣服(斤)',
+  `wastePaper` float DEFAULT '0' COMMENT '废纸(斤)',
+  `other` float DEFAULT '0' COMMENT '其他(斤)',
+  `state` int(11) DEFAULT '0' COMMENT '我的贡献表状态,0..',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="recyclingrecords" view="standard">
+<left>40</left>
+<top>394</top>
+<width>231</width>
+<height>296</height>
+<sql_create_table>CREATE TABLE `recyclingrecords` (
+  `id` varchar(32) NOT NULL COMMENT '回收纪录表id标识',
+  `personalId` varchar(255) NOT NULL COMMENT '用户id',
+  `lemonIntegral` int(11) DEFAULT '0' COMMENT '柠檬积分',
+  `usedClothes` int(11) DEFAULT '0' COMMENT '旧衣服(斤)',
+  `wastePaper` int(11) DEFAULT '0' COMMENT '废纸(斤)',
+  `other` int(11) DEFAULT '0' COMMENT '其他(斤)',
+  `state` int(11) DEFAULT '0' COMMENT '回收纪录表状态,0..',
+  `cdate` datetime DEFAULT NULL COMMENT '创建时间',
+  `mdate` datetime DEFAULT NULL COMMENT '最后修改时间',
+  `creator` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `uman` varchar(32) DEFAULT NULL COMMENT '修改人',
+  `df` int(11) DEFAULT '0' COMMENT '是否删除',
+  `version` int(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

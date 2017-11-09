@@ -35,7 +35,7 @@
       <view class='item'>
         <view class='item_text'>下单时间: 2017-11-06</view>
         <view class='item_static'>
-          <image class='item_static_img' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg'/><text class='item_static_text'>已提交</text>
+          <image class='item_static_img' src='/assets/images/myinfo/phone.png'/><text class='item_static_text'>已提交</text>
         </view>
       </view>
       <view class='item_border'></view>
@@ -47,7 +47,7 @@
         <view class='item_text'>预约时间: 2017-11-06</view>
         <view class='item_btn'>
           <button class='consultation_bottom_btn'>取消预约</button>
-          <button class='consultation_bottom_btn' bindtap='CalculationlistBindtap'>确认到达</button>
+          <button class='consultation_bottom_btn'  id='eixt' bindtap='CalculationlistBindtap'>确认到达</button>
         </view>
       </view>
     </view>
@@ -76,13 +76,13 @@
   <!-- 预约数据 end -->
 
   <!-- 计算清单 start-->
-  <view class='Calculationlist' wx:if="{{cst== true}}" bindtap='CalculationlistBindtap'>
+  <view class='Calculationlist' wx:if="{{cst== true}}" id='eixt' bindtap='CalculationlistBindtap'>
     <form bindsubmit="submitForm">
-    <view class='huishou_form'>
+    <view class='huishou_form' catchtap='CalculationlistBindtap'> 
       <view class='form_frist'>计算清单</view>
       <view class='form'>
         <view class='title'>
-          <image class='title_img' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg'></image>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
           旧衣
         </view>
         <view class='input'>
@@ -93,7 +93,7 @@
       
       <view class='form'>
         <view class='title'>
-          <image class='title_img' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg'></image>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
         废纸</view>
         <view class='input'>
           <input  name="remark" value='{{remark}}' type='text' placeholder='请输入'/>
@@ -103,7 +103,7 @@
 
       <view class='form'>
         <view class='title'>
-          <image class='title_img' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg'></image>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
         其他</view>
         <view class='input'>
           <input name="adressInfo" value="{{adressInfo}}" type='text' placeholder='请输入' />
@@ -113,7 +113,7 @@
 
       <view class='form'>
         <view class='title'>
-        <image class='title_img' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg'></image>
+        <image class='title_img' src='/assets/images/index/yifu.png'></image>
         密匙</view>
         <view class='input'>
           <input name="cellYou" value='{{cellYou}}' type='text' placeholder='上门回收同事填写' />

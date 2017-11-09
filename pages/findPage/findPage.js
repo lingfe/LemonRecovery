@@ -15,6 +15,13 @@ Page({
     
   },
 
+  //关于柠檬
+  bindtapGyLemon:function(e){
+    wx.navigateTo({
+      url: "/pages/findPage/gyLemon/gyLemon",
+    });
+  },
+
   //积分兑换
   bindtapPoints:function(e){
     wx.navigateTo({

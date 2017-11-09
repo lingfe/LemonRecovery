@@ -18,9 +18,12 @@ Page({
 
   //显示或隐藏表单
   CalculationlistBindtap:function(e){
-    this.setData({
-      cst:this.data.cst==false?true:false
-    });
+    console.log(e);
+    if (e.currentTarget.id=="eixt"){
+      this.setData({
+        cst:this.data.cst==false?true:false
+      });
+    }
   },
 
   /**

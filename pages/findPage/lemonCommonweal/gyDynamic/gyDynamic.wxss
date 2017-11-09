@@ -1,0 +1,13 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-09
+ *   描述:  柠檬公益动态
+ * 
+ * */
+
+ .menu_img{
+   width: 100%;
+   height: 1500rpx;
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+ }

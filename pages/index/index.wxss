@@ -5,7 +5,7 @@
  * 
  * */
  page{
-   background-color: #F7F8F3;
+   background-color: #fff;
  }
 .page{
   margin: 0;
@@ -173,7 +173,7 @@ button::after {
 }
 .swiper {
   display:block;
-  height:80px;
+  height:100px;
 }
 .content{
   width: 90%;
@@ -184,8 +184,16 @@ button::after {
   height: 100rpx;
   float: left;
   font-size: 26rpx;
-  background-image:url(https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png);
-  background-size:100% 100%;
-  background-repeat: no-repeat;
-  margin-left: 90rpx;
+  margin-left: 97rpx;
+}
+.content_img{
+  width: 60rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+}
+.content_text{
+  width: 100rpx;
+  font-size: 34rpx;
+  color: #666;
+  text-align: center;
 }

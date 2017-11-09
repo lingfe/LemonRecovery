@@ -43,9 +43,15 @@
   <!-- 我的贡献 start-->
   <view class='myContribution'>
     <view class='myContribution_view'>
-      <view class='my _Appointment' bindtap='bindtapReservation'>我的预约</view>
-      <view class='my _l'>|</view>
-      <view class='my _Contribution' bindtap='bindtabContribtion'>我的贡献</view>
+      <view class='my' bindtap='bindtapReservation'>
+        <image class='content_img' src='/assets/images/myinfo/my_gx.png' />
+        <view class='content_text'>我的预约</view>
+      </view>
+      <view class='my'>|</view>
+      <view class='my' bindtap='bindtabContribtion'>
+        <image class='content_img' src='/assets/images/myinfo/my_gx.png' />
+        <view class='content_text'>我的贡献</view>
+      </view>
     </view>
   </view>
   <!-- 我的贡献 end-->

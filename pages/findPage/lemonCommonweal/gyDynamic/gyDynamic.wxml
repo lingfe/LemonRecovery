@@ -1,0 +1,9 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-09
+ *   描述:  柠檬公益动态
+ * 
+ * */-->
+<view class='page'>
+  <image class='menu_img' src='/assets/images/find/goyi/dotai.jpg'></image>
+</view>
