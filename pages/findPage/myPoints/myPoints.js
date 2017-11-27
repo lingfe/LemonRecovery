@@ -89,7 +89,7 @@ Page({
         scriptName: 'Query',
         nameSpaceMap: {
           rows: [{
-            df:0,  
+            state:0,  
           }]
         }
       })

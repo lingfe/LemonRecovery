@@ -30,6 +30,7 @@ page{
  }
   .item_text{
    width: 90%;
+   
    margin-top:20rpx;
    margin-left: 20rpx;
   overflow: hidden; /**自动隐藏文字*/
