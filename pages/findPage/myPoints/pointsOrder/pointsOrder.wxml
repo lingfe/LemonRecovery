@@ -8,25 +8,26 @@
   <!-- 我的订单 start -->
   <view class='myorder'>
     <view class='myorder_title'>我的订单</view>
-    <view class='myorder_list'>
+    <view class='myorder_list' wx:for="{{list}}" wx:key="*this">
       <view class='list_item'>
         <view class='item_img'>
-          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+          <image class='img' src='{{item.imgUrl}}'></image>
           <view class='text'>
-            <view class='text_title'>正品得力A试纸</view>
-            <view class='text_proices'><span class="span">36</span> x 2</view>
+            <view class='text_title'>{{item.title}}</view>
+            <view class='text_proices'><span class="span">{{item.integral}}</span> x {{item.number}}</view>
           </view>
         </view>
         <view class='item_btn'>
-          <view class='btn'>确认收货</view>
+          <view class='btn0' id="{{item.id}}" wx:if="{{item.state == 0}}" bindtap='bindtapConfirmReceipt'>确认收货</view>
+          <view class='btn1' id="{{item.id}}" wx:if="{{item.state == 1}}" bindtap='bindtapConfirmReceipt'>已完成</view>
         </view>
       </view>
       <view class='list_time'>
         <view class='time_time'>
-          2017-11-08 13:41  12345678901
+          {{item.cdate}}
         </view>
         <view class='time_coum'>
-          合计<image class='time_coum_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>76
+          合计<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{item.totalIntegral}}
         </view>
       </view>
     </view>

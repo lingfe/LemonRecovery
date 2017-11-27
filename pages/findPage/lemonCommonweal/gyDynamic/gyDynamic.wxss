@@ -4,6 +4,56 @@
  *   描述:  柠檬公益动态
  * 
  * */
+  page{
+    background-color: #fff;
+  }
+  .neiro{
+    width: 94%;
+    height: 120rpx;
+    margin: auto;
+    margin-top: 20rpx;
+  }
+
+  .neiro_image{
+    width: 22%;
+    height: 120rpx;
+    float: left;
+  }
+  .image{
+    width: 100%;
+    height: 120rpx;
+  }
+
+  .neiro_text{
+    width: 74%;
+    height: 120rpx;
+    float: left;
+    margin-left: 20rpx;
+  }
+  .text_title{
+    width: 100%;
+    font-size: 36rpx;
+    color:#666;
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: hidden; /**自动隐藏文字*/
+    text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+    white-space: nowrap; /**强制不换行*/
+    
+  }
+  .text_content{
+    width: 100%;
+    font-size: 26rpx;
+    height: 70rpx;
+    color:#aaa;
+    overflow:hidden;
+    text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+    word-wrap : break-word;/*强制换行*/ 
+  }
+
+  
+  
+
 
  .menu_img{
    width: 100%;

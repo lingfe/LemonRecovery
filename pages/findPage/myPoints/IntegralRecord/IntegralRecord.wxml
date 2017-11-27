@@ -1,0 +1,37 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-13
+ *   描述:  积分纪录
+ * 
+ * */-->
+<view class='page'>
+  <!-- 积分纪录 start -->
+  <view class='recyclingRecords'>
+    <view class='recyclingRecords_title'>积分纪录</view>
+    <view class='recyclingRecords_order'>
+
+      <view class='order_' wx:for="{{list}}" wx:key="*this">
+        <view class='order_data'>
+          <view class='data_datetime'>日期: {{item.cdate}}</view>
+          <view class='data_wen'>旧衣+{{item.usedClothes}}、废纸+{{item.wastePaper}}</view>
+        </view>
+        <view class='order_data' style='border-bottom:1rpx solid #aaa;'>
+          <view class='data_datetime'>单号: {{item.id}}</view>
+          <view class='data_wen'>其他+{{item.other}}、积分+{{item.lemonIntegral}}</view>
+        </view>
+      </view>
+
+      <view class='order_'>
+        <view class='order_data'>
+          <view class='data_datetime'>日期: 2017-11-03</view>
+          <view class='data_wen'>旧衣+1、废纸+1</view>
+        </view>
+        <view class='order_data' style='border-bottom:1rpx solid #aaa;'>
+          <view class='data_datetime'>单号: 123456789041</view>
+          <view class='data_wen'>其他+2、积分+4</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 积分纪录 end-->
+</view>

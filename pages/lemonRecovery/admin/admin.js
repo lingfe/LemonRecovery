@@ -14,8 +14,162 @@ Page({
     activeIndex: 0,         //tab切换下标
     sliderOffset: 0,        //坐标x
     sliderLeft: 0,          //坐标y
-    list: null              //数据
-  },  
+    list: null,
+    cst: false,      //隐藏
+    form:{
+      usedClothes:0, //旧衣
+      wastePaper:0, //废纸
+      other:0,     //其他
+      personalId:null,   //用户id
+      collector:null, //收集员编号
+      num:0,    //总积分
+      lemonRecoveryId:null,     //预约表id
+      resourceContribution:0,  //总共多少斤
+      state: null,    //预约状态,0=(已提交,未处理),1=(已完成,已处理),2=(未采纳,不处理),3=(已取消,)
+    }
+  },
+
+  //旧衣
+  inputusedClothes:function(e){
+    var that=this;
+    var form=that.data.form;
+    console.log(e.detail.value);
+    var usedClothes = parseFloat(e.detail.value == '' ? 0 : e.detail.value);
+    var num = form.wastePaper * 0.3 + form.other * 0.3+usedClothes;
+    var nresourceContribution = parseInt(form.wastePaper + form.other + usedClothes);
+    console.log("nresourceContribution:" + nresourceContribution);
+    that.setData({
+      'form.usedClothes': usedClothes,
+      'form.num': num.toFixed(1),
+      'form.resourceContribution': nresourceContribution
+    });
+  },
+
+  //废纸
+  inputwastePaper:function(e){
+    var that = this;
+    var form = that.data.form;
+    var wastePaper = parseFloat(e.detail.value == '' ? 0 : e.detail.value);
+    var num = form.usedClothes + form.other * 0.3 + wastePaper * 0.3;
+    var nresourceContribution = parseInt(wastePaper + form.other + form.usedClothes);
+    console.log("nresourceContribution:" + nresourceContribution);
+    this.setData({
+      'form.wastePaper': wastePaper,
+      'form.num': num.toFixed(1),
+      'form.resourceContribution': nresourceContribution
+    });
+  },
+
+  //其他
+  inputother:function(e){
+    var that = this;
+    var form = that.data.form;
+    var other = parseFloat(e.detail.value == '' ? 0 : e.detail.value);
+    var num = form.wastePaper * 0.3 + form.usedClothes + other * 0.3;
+    var nresourceContribution = parseInt(form.wastePaper + other + form.usedClothes);
+    console.log("nresourceContribution:" + nresourceContribution);
+    this.setData({
+      'form.other': other,
+      'form.num': num.toFixed(1),
+      'form.resourceContribution': nresourceContribution
+    });
+  },
+
+  //收集员编号
+  inputcollector:function(e){
+    this.setData({
+      'form.collector':e.detail.value
+    });
+  },
+
+  //设置我的贡献资源
+  setContribtion: function (that) {
+    var url = app.config.basePath_web + "api/exe/save";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var resourceContribution=(that.data.myContribution.resourceContribution + that.data.form.resourceContribution);
+    var lemonIntegral = parseFloat(that.data.myContribution.lemonIntegral + parseFloat(that.data.form.num)).toFixed(1);
+    var usedClothes = (that.data.myContribution.usedClothes + that.data.form.usedClothes);
+    var wastePaper = (that.data.myContribution.wastePaper + that.data.form.wastePaper);
+    var other = (that.data.myContribution.other + that.data.form.other);
+
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //我的贡献表
+        scriptName: 'Query',
+        cudScriptName: 'Update',
+        nameSpaceMap: {
+          rows: [{
+            id: that.data.myContribution.id,  //贡献表id
+            personalId: that.data.myContribution.personalId,  //用户id
+            resourceContribution: resourceContribution,    //资源贡献多少斤
+            lemonIntegral: lemonIntegral ,//柠檬总积分
+            usedClothes: usedClothes,//衣服的斤数
+            wastePaper: wastePaper,//废纸斤数
+            other:other,//其他
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      that.setData({
+        myContribution: null,
+        cst:false,
+      });
+    });
+  },
+
+  //显示或隐藏表单
+  CalculationlistBindtap: function (e) {
+    if (!app.checkInput(e.currentTarget.id)) {
+      console.log(e);
+      var that=this;
+      that.setData({
+        'form.state': e.currentTarget.dataset.state,
+        'form.personalId': e.currentTarget.dataset.personalid,
+        'form.lemonRecoveryId':e.currentTarget.id,
+        cst: this.data.cst == false ? true : false
+      });
+      //获取我的贡献资源
+      that.getContribtion(that, e.currentTarget.dataset.personalid);
+    }
+  },
+
+  //获取我的贡献资源
+  getContribtion: function (that, personalId) {
+    var url = app.config.basePath_web + "api/exe/get";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //我的贡献表
+        scriptName: 'Query',
+        nameSpaceMap: {
+          rows: [{
+            personalId: personalId,  //用户id
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      //验证是否为空如果为空就生成一条贡献
+      if (!app.checkInput(res.data.rows)) {
+        that.setData({
+          myContribution: res.data.rows[0],
+        });
+      } 
+    });
+  },
 
   //提示框
   showModal: function (msg) {
@@ -48,9 +202,22 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
+
+  //不处理
+  bindtapnostate:function(e){
+    var that = this;
+    if (!app.checkInput(e.currentTarget.id)) {
+      this.setData({
+        'form.state': 2,
+        'form.lemonRecoveryId': e.currentTarget.id,
+      });
+    }
+    //调用函数
+    that.Btntap();
+  },
   
   //修改预约状态
-  Btntap:function(e){
+  Btntap:function(){
     var that=this;
     var url = app.config.basePath_web + "api/exe/save";
     //请求头
@@ -65,15 +232,71 @@ Page({
         cudScriptName: 'Save',
         nameSpaceMap: {
           rows: [{
-            id: e.currentTarget.id,                        //预约id
-            state: e.currentTarget.dataset.state           //预约状态,0=未处理,1=已处理,2=不处理
+            id: that.data.form.lemonRecoveryId,    //预约id
+            state: that.data.form.state   //预约状态,0=(已提交,未处理),1=(已完成,已处理),2=(未采纳,不处理),3=(已取消,)
           }]
         }
       })
     };
     //发送请求
     app.request.reqPost(url,header,data,function(res){
+      //刷新
       that.getlemonRecovery(that, 0);
+    });
+  },
+
+  //设置回收纪录
+  submitForm:function(e){
+    var that=this;
+    //得到表单
+    var form=that.data.form;
+
+    //验证
+    if (app.checkInput(form.usedClothes)){
+      that.showModal("请输入旧衣斤数");
+      return;
+    } else if (app.checkInput(form.wastePaper)) {
+      that.showModal("请输入废纸斤数");
+      return;
+    } else if (app.checkInput(form.other)) {
+      that.showModal("请输入其他斤数");
+      return;
+    }
+
+    //url
+    var url = app.config.basePath_web + "api/exe/save";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'recyclingRecords',           //预约表
+        scriptName: 'Query',
+        cudScriptName: 'Save',
+        nameSpaceMap: {
+          rows: [{
+            personalId: form.personalId,  //用户id
+            usedClothes: form.usedClothes,    //旧衣
+            wastePaper: form.wastePaper,      //废纸
+            other: form.wastePaper, //其他
+            lemonIntegral:form.num,//总积分
+            collector: form.collector //收集员编号
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      if(res.data.status==1){
+        //修改状态
+        that.Btntap();
+        //修改用户贡献
+        that.setContribtion(that);
+        //刷新
+        that.getlemonRecovery(that, 0);
+      }
     });
   },
 

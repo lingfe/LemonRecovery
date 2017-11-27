@@ -12,35 +12,35 @@
     <view class='menu'>
        <view class='menu_title'>联系人</view>
        <view class='menu_input'>
-          <input class='input' placeholder='请输入联系人'></input>
+          <input class='input' value='{{form.contactPeople}}' bindinput='inputcontactPeople' placeholder='请输入联系人'></input>
        </view>
     </view>
     <view class='menu' bindtap='bindtapLemonCommonweal'>
        <view class='menu_title'>联系电话</view>
        <view class='menu_input'>
-          <input class='input' placeholder='请输入联系电话'></input>
+          <input class='input' value='{{form.phone}}' bindinput='inputphone' placeholder='请输入联系电话'></input>
        </view>
     </view>
     <view class='menu'>
        <view class='menu_title'>详细地址</view>
        <view class='menu_input'>
-          <input class='input' placeholder='请输入详细地址'></input>
+          <input class='input' value='{{form.adressInfo}}' bindinput='inputadressInfo' placeholder='请输入详细地址'></input>
        </view>
     </view>
     <view class='menu'>
        <view class='menu_title'>申请原因</view>
        <view class='menu_input'>
-          <input class='input' placeholder='请输入申请原因'></input>
+          <input class='input' value='{{form.applyReason}}' bindinput='inputapplyReason' placeholder='请输入申请原因'></input>
        </view>
     </view>
     <view class='menu'>
        <view class='menu_title'>需求说明</view>
        <view class='menu_input'>
-          <input class='input' placeholder='请输入需求说明'></input>
+          <input class='input' value='{{form.demandExplain }}' bindinput='inputdemandExplain' placeholder='请输入需求说明'></input>
        </view>
     </view>
     <view class='menu'>
-      <button class='form_last' form-type="submit">登记预约</button>
+      <button class='form_last' bindtap='setapplyOldclothes'>申领旧衣</button>
     </view>
   </view>
 </view>

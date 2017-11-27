@@ -93,30 +93,10 @@ CREATE TABLE convertibleOrder(
   PRIMARY KEY (`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-/*5.我的贡献表*/
-DROP TABLE IF EXISTS myContribution;
-CREATE TABLE myContribution(
-	id  VARCHAR(32) NOT NULL COMMENT '我的贡献表id标识',
-	`personalId` VARCHAR(255) NOT NULL COMMENT '用户id',
-	resourceContribution FLOAT DEFAULT '0' COMMENT '资源贡献(斤)',
-	lemonIntegral INT(11) DEFAULT '0' COMMENT '柠檬积分',
-	cityRanking INT(11) DEFAULT '0' COMMENT '城市排名',
-	usedClothes FLOAT DEFAULT '0' COMMENT '旧衣服(斤)',
-	wastePaper FLOAT DEFAULT '0' COMMENT '废纸(斤)',
-	other FLOAT DEFAULT '0' COMMENT '其他(斤)',
-	`state` INT(11) DEFAULT '0' COMMENT '我的贡献表状态,0..',
 
-  `cdate` DATETIME DEFAULT NULL COMMENT '创建时间',
-  `mdate` DATETIME DEFAULT NULL COMMENT '最后修改时间',
-  `creator` VARCHAR(32) DEFAULT NULL COMMENT '创建人',
-  `uman` VARCHAR(32) DEFAULT NULL COMMENT '修改人',
-  `df` INT(11) DEFAULT '0' COMMENT '是否删除',
-  `version` INT(11) DEFAULT '0' COMMENT '数据版本',
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-/*6.回收纪录表*/
-DROP TABLE IS EXISTS recyclingRecords;
+/*5.回收纪录表*/
+DROP TABLE IF EXISTS recyclingRecords;
 CREATE TABLE recyclingRecords(
 	id  VARCHAR(32) NOT NULL COMMENT '回收纪录表id标识',
 	`personalId` VARCHAR(255) NOT NULL COMMENT '用户id',
@@ -125,6 +105,7 @@ CREATE TABLE recyclingRecords(
 	wastePaper INT(11) DEFAULT '0' COMMENT '废纸(斤)',
 	other INT(11) DEFAULT '0'  COMMENT '其他(斤)',
 	`state` INT(11) DEFAULT '0' COMMENT '回收纪录表状态,0..',
+	collector VARCHAR(255) COMMENT '收集员编号',
 
   `cdate` DATETIME DEFAULT NULL COMMENT '创建时间',
   `mdate` DATETIME DEFAULT NULL COMMENT '最后修改时间',
@@ -135,4 +116,23 @@ CREATE TABLE recyclingRecords(
   PRIMARY KEY (`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-
+/*6.我的贡献表*/
+DROP TABLE IF EXISTS `myContribution`;
+CREATE TABLE `myContribution` (
+  `id` VARCHAR(32) NOT NULL COMMENT '我的贡献表id标识',
+  `personalId` VARCHAR(255) NOT NULL COMMENT '用户id',
+  `resourceContribution` FLOAT DEFAULT '0' COMMENT '资源贡献(斤)',
+  `lemonIntegral` INT(11) DEFAULT '0' COMMENT '柠檬积分',
+  `cityRanking` INT(11) DEFAULT '0' COMMENT '城市排名',
+  `usedClothes` FLOAT DEFAULT '0' COMMENT '旧衣服(斤)',
+  `wastePaper` FLOAT DEFAULT '0' COMMENT '废纸(斤)',
+  `other` FLOAT DEFAULT '0' COMMENT '其他(斤)',
+  `state` INT(11) DEFAULT '0' COMMENT '我的贡献表状态,0..',
+  `cdate` DATETIME DEFAULT NULL COMMENT '创建时间',
+  `mdate` DATETIME DEFAULT NULL COMMENT '最后修改时间',
+  `creator` VARCHAR(32) DEFAULT NULL COMMENT '创建人',
+  `uman` VARCHAR(32) DEFAULT NULL COMMENT '修改人',
+  `df` INT(11) DEFAULT '0' COMMENT '是否删除',
+  `version` INT(11) DEFAULT '0' COMMENT '数据版本',
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8;

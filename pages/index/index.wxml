@@ -57,7 +57,7 @@
 
   <!-- 回收清单 start-->
   <view class='recyclingList'>
-      <view class='recyclingList_title'>回收清单
+      <view class='recyclingList_title'>回 收 清 单
         <image class='recyclingList_title_img' src='/assets/images/index/whao.png' />
       </view>
       <view class='recyclingLIst_content'>
@@ -69,7 +69,7 @@
           duration        滑动动画时长
           vertical        滑动方向是否为纵向
          -->
-        <swiper class='swiper' autoplay="true" indicator-dots="true" circular="true"  interval="3000" duration="1000">
+        <swiper class='swiper' autoplay="true" indicator-dots="true" circular="true"  interval="5000" duration="2000">
           <swiper-item>
             <view class='content'>
               <view class='conten_content'>
@@ -109,7 +109,7 @@
   <!-- 回收清单 end -->
 
   <!-- 注意事项  start-->
-  <view class='huishou_text'>
+  <!-- <view class='huishou_text'>
     <view class='text_top'>注意事项</view>
     <view class='text'>• 柠檬项目正在测试期间，仅支持贵阳市观山湖及云岩区大营坡地区。</view>
     <view class='text'>• 可回收物资为：<span class="span">衣服/鞋子/包包/床单</span>等。</view>
@@ -117,6 +117,6 @@
     <view class='text'>• 柠檬回收之衣物进过分拣发送至工厂，拆分纤维回收利用，例如拖把桌布等。</view>
     <view class='text'>• 预约登记后，工作人员出发前将提前与您联系确认。</view>
     <view class='text'>• 生活原本没有垃圾，它们都是放错地方的资源，让城市呼吸，柠檬正在行动。</view>
-  </view> 
+  </view>  -->
   <!-- 注意事项  end-->
 </view>

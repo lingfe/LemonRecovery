@@ -26,28 +26,47 @@
       <!-- 未处理  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
         <!-- 预约数据 start -->
+        <!-- 订单数据 start-->
         <view class='list' wx:if="{{list!=null}}">
-          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
-            <view class='item'>客户称呼: {{item.cellYou}}</view>
-            <view class='item'>联系电话: {{item.phone}}</view>
-            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
-            <view class='item'>预约地址: {{item.adressInfo}}</view>
-            <view class='item'>预约时间: {{item.doorTime}}</view>
-            <view class='item'>预约状态: 未处理</view>
+          <view class='list_item'  wx:for="{{list}}" wx:key="{{*this}}">
             <view class='item'>
-               <button class='btn' id="{{item.id}}" data-state="1" bindtap='Btntap'>处理</button>
-               <button class='btn' id="{{item.id}}" data-state="2" bindtap='Btntap'>不处理</button>
+              <view class='item_text'>订单编号: {{item.id}}</view>
+            </view>
+            <view class='item'>
+              <view class='item_text'>下单时间: {{item.cdate}}</view>
+              <view class='item_static' wx:if="{{item.state==0}}">
+                <image class='item_static_img' src='/assets/images/myinfo/phone.png'/><text class='item_static_text'>未处理</text>
+              </view>
+            </view>
+            <view class='item_border'></view>
+            <view class='item'>
+              <view class='item_text'>您的称呼: {{item.cellYou}}</view>
+              <view class='item_text'>联系电话: {{item.phone}}</view>
+              <view class='item_text'>预约地点: {{item.yuyueAdress}}</view>
+              <view class='item_text'>预约时间: {{item.doorTime}}</view>
+              <view class='item_text'>预约地址: {{item.adressInfo}}</view>
+              <view class='item_btn' wx:if="{{item.state==0}}">
+                <button class='consultation_bottom_btn' 
+                id='{{item.id}}' 
+                data-personalId="{{item.personalId}}" 
+                data-state="1"
+                bindtap='CalculationlistBindtap'>处理</button>
+                <button class='consultation_bottom_btn' id='{{item.id}}'  bindtap='bindtapnostate'>不处理</button>
+              </view>
             </view>
           </view>
         </view>
+        <!-- 订单数据 end-->
 
+        <!-- 空订单 start-->
         <view class='list' wx:else="{{list==null}}">
           <view class='list_item'>
             <view class='list_item_img' >
-              <view class='item_img'>没有预约哦(0_0)</view>
+              <view class='item_img'>还没有回收记录哦(0_0)</view>
             </view>
           </view>
         </view>
+        <!-- 空订单 end-->
         <!-- 预约数据 start -->
       </view>
       <!-- 未处理  end-->
@@ -55,24 +74,39 @@
       <!-- 已处理  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
         <!-- 预约数据 start -->
+        <!-- 订单数据 start-->
         <view class='list' wx:if="{{list!=null}}">
-          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
-            <view class='item'>客户称呼: {{item.cellYou}}</view>
-            <view class='item'>联系电话: {{item.phone}}</view>
-            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
-            <view class='item'>预约地址: {{item.adressInfo}}</view>
-            <view class='item'>预约时间: {{item.doorTime}}</view>
-            <view class='item'>预约状态: 已处理</view>
-          </view>
-        </view>
-
-        <view class='list' wx:else="{{list==null}}">
-          <view class='list_item'>
-            <view class='list_item_img' >
-              <view class='item_img'>没有预约哦(0_0)</view>
+          <view class='list_item'  wx:for="{{list}}" wx:key="{{*this}}">
+            <view class='item'>
+              <view class='item_text'>订单编号: {{item.id}}</view>
+            </view>
+            <view class='item'>
+              <view class='item_text'>下单时间: {{item.cdate}}</view>
+              <view class='item_static' wx:if="{{item.state==1}}">
+                <text class='item_static_text'>已处理</text>
+              </view>
+            </view>
+            <view class='item_border'></view>
+            <view class='item'>
+              <view class='item_text'>您的称呼: {{item.cellYou}}</view>
+              <view class='item_text'>联系电话: {{item.phone}}</view>
+              <view class='item_text'>预约地点: {{item.yuyueAdress}}</view>
+              <view class='item_text'>预约地址: {{item.adressInfo}}</view>
+              <view class='item_text'>预约时间: {{item.doorTime}}</view>
             </view>
           </view>
         </view>
+        <!-- 订单数据 end-->
+
+        <!-- 空订单 start-->
+        <view class='list' wx:else="{{list==null}}">
+          <view class='list_item'>
+            <view class='list_item_img' >
+              <view class='item_img'>还没有回收记录哦(0_0)</view>
+            </view>
+          </view>
+        </view>
+        <!-- 空订单 end-->
         <!-- 预约数据 start -->
       </view>
       <!-- 已处理  end-->
@@ -80,24 +114,39 @@
       <!-- 不处理  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
         <!-- 预约数据 start -->
+        <!-- 订单数据 start-->
         <view class='list' wx:if="{{list!=null}}">
-          <view class='list_item' wx:for="{{list}}" wx:key="{{*this}}">
-            <view class='item'>客户称呼: {{item.cellYou}}</view>
-            <view class='item'>联系电话: {{item.phone}}</view>
-            <view class='item'>预约地点: {{item.yuyueAdress}}</view>
-            <view class='item'>预约地址: {{item.adressInfo}}</view>
-            <view class='item'>预约时间: {{item.doorTime}}</view>
-            <view class='item'>预约状态: 不处理</view>
-          </view>
-        </view>
-
-        <view class='list' wx:else="{{list==null}}">
-          <view class='list_item'>
-            <view class='list_item_img' >
-              <view class='item_img'>没有预约哦(0_0)</view>
+          <view class='list_item'  wx:for="{{list}}" wx:key="{{*this}}">
+            <view class='item'>
+              <view class='item_text'>订单编号: {{item.id}}</view>
+            </view>
+            <view class='item'>
+              <view class='item_text'>下单时间: {{item.cdate}}</view>
+              <view class='item_static' wx:if="{{item.state==2}}">
+                <text class='item_static_text'>不处理</text>
+              </view>
+            </view>
+            <view class='item_border'></view>
+            <view class='item'>
+              <view class='item_text'>您的称呼: {{item.cellYou}}</view>
+              <view class='item_text'>联系电话: {{item.phone}}</view>
+              <view class='item_text'>预约地点: {{item.yuyueAdress}}</view>
+              <view class='item_text'>预约地址: {{item.adressInfo}}</view>
+              <view class='item_text'>预约时间: {{item.doorTime}}</view>
             </view>
           </view>
         </view>
+        <!-- 订单数据 end-->
+
+        <!-- 空订单 start-->
+        <view class='list' wx:else="{{list==null}}">
+          <view class='list_item'>
+            <view class='list_item_img' >
+              <view class='item_img'>还没有回收记录哦(0_0)</view>
+            </view>
+          </view>
+        </view>
+        <!-- 空订单 end-->
         <!-- 预约数据 start -->
       </view>
       <!-- 不处理  end-->
@@ -105,5 +154,66 @@
     <!-- 内容  end-->
   </view>
   <!-- tab切换  end-->
+
+  <!-- 计算清单 start-->
+  <view class='Calculationlist' wx:if="{{cst== true}}" id='eixt' bindtap='CalculationlistBindtap'>
+    <form bindsubmit="submitForm">
+    <view class='huishou_form' catchtap='CalculationlistBindtap'> 
+      <view class='form_frist'>计算清单</view>
+      <view class='form'>
+        <view class='title'>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
+          旧衣
+        </view>
+        <view class='input'>
+          <input  bindinput='inputusedClothes' type='text' placeholder='请输入'/>
+        </view>
+        <view class='title'>斤</view>
+      </view>
+      
+      <view class='form'>
+        <view class='title'>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
+        废纸</view>
+        <view class='input'>
+          <input  bindinput='inputwastePaper' type='text' placeholder='请输入'/>
+        </view>
+        <view class='title'>斤</view>
+      </view>
+
+      <view class='form'>
+        <view class='title'>
+          <image class='title_img' src='/assets/images/index/yifu.png'></image>
+        其他</view>
+        <view class='input'>
+          <input bindinput='inputother' type='text' placeholder='请输入' />
+        </view>
+        <view class='title'>斤</view>
+      </view>
+
+      <view class='form'>
+        <view class='title'>
+        <image class='title_img' src='/assets/images/index/yifu.png'></image>
+        密匙</view>
+        <view class='input'>
+          <input value='{{collector}}' bindinput='inputcollector' type='text' placeholder='上门回收同事填写' />
+        </view>
+      </view>
+
+      <view class='form_text'>
+        <view class='text_text'>1斤旧衣=1分</view>
+        <view class=''>
+          <view class='text_text_last'>1斤废纸/其他=0.3分</view>
+          <view class='text_text_right'>合计: <span class="span">{{form.num}}分</span></view>
+        </view>
+      </view>
+
+      <button class='form_last' form-type="submit">确定</button>
+    </view>
+    </form>
+  </view>
+  <!-- 计算清单 end-->
 </view>
+
+
 

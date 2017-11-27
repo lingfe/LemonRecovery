@@ -12,35 +12,98 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    list:null,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  //确认收货
+  bindtapConfirmReceipt:function(e){
+    var that=this;
+    var id = e.currentTarget.id;
+    var url = app.config.basePath_web + "api/exe/save";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'convertibleOrder',           //订单兑换表
+        scriptName: 'Query',
+        cudScriptName: 'Update',
+        nameSpaceMap: {
+          rows: [{
+            state: 1,    //状态,0=已提交,1=已完成
+            personalId: wx.getStorageSync('personalId'),//用户id
+            id: id,  //订单id
+          }]
+        }
+      })
+    };
+
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      //获取我的兑换订单
+      that.getMyconvertibleOrder(that);
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  //页面加载
+  onLoad:function(opention){
+    var that=this;
+    //获取我的兑换订单
+    that.getMyconvertibleOrder(that);
+  },
+
+  //获取我的兑换订单
+  getMyconvertibleOrder:function(that){
+
+    var url = app.config.basePath_web + "api/exe/get";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'convertibleOrder',           //兑换订单表
+        scriptName: 'Query',
+        nameSpaceMap: {
+          rows: [{
+            personalId: wx.getStorageSync("personalId"),  //用户id
+          }]
+        }
+      })
+    };
+
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      var list = res.data.rows;
+      if (list.length != 0) {
+        that.setData({
+          list: list,
+        });
+      }
+    });
+  },
+
+  //生命周期函数--监听页面初次渲染完成
   onReady: function () {
-  
+    
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  //生命周期函数--监听页面显示
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**

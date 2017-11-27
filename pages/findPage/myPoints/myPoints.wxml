@@ -8,7 +8,7 @@
   <view class='top'>
     <!-- 标题 start -->
     <view class='top_title'>
-      305
+      {{myContribution.lemonIntegral}}
     </view>
     <!-- 标题 end -->
 
@@ -18,7 +18,7 @@
 
     <!-- 按钮 start -->
     <view class='top_btn'>
-      <view class='btn_1'>积分纪录</view>
+      <view class='btn_1' bindtap='bindtapIntegralRecord'>积分纪录</view>
       <view class='btn_order' bindtap='bindtapPointsOrder'>兑换订单</view>
     </view>
     <!-- 按钮 end -->
@@ -28,21 +28,13 @@
   <view class='square'>
     <view class='square_title'>兑换广场</view>
     <view class='square_content'>
-      <navigator url='/pages/findPage/myPoints/exchange/exchange'>
+      <navigator url='/pages/findPage/myPoints/exchange/exchange?id={{item.id}}'wx:for="{{list}}" wx:key="*this">
       <view class='content'>
-        <image class='content_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
-        <view class='content_title'>正品得力A试纸</view>
-        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>32</view>
-        <view class='content_text'>剩余: 100</view>
-      </view>
-      </navigator>
-      
-      <navigator url='/pages/findPage/myPoints/exchange/exchange'>
-      <view class='content'>
-        <image class='content_img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
-        <view class='content_title'>正品得力A试纸</view>
-        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>32</view>
-        <view class='content_text'>剩余: 100</view>
+        <image class='content_img' src='{{item.imgUrl}}'></image>
+        <view class='content_title'>{{item.title}}</view>
+        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>
+        {{item.integral}}</view>
+        <view class='content_text'>剩余: {{item.surplus}}</view>
       </view>
       </navigator>
     </view>

@@ -5,5 +5,34 @@
  * 
  * */-->
 <view class='page'>
-  <image class='menu_img' src='/assets/images/find/goyi/dotai.jpg'></image>
+  <view class='neiro'>
+      <view class='neiro_image'>
+        <image class='image' src='https://09.imgmini.eastday.com/mobile/20171120/20171120104858_0c6e14d0917e03b02f81ba84a8655f91_1_mwpm_03201609.jpg'></image>
+      </view>
+      <view class='neiro_text'>
+        <view class='text_title'>清镇市宣传十九大精神公益广告墙画大赛落幕</view>
+        <view class='text_content'>这项公益活动首站选择了在新疆克拉玛依市。活动以征集、寻访发现美丽文明的城市以及温暖动人的故事等方式开展，通过“心理剧”拍摄的手段</view>
+      </view>
+  </view>
+
+  <view class='neiro'>
+      <view class='neiro_image'>
+        <image class='image' src='https://00.imgmini.eastday.com/mobile/20171120/20171120030217_02804f940b301c34b673993c0002a1bd_1.jpeg'></image>
+      </view>
+      <view class='neiro_text'>
+        <view class='text_title'>国际志愿者日公益晚会准备中……</view>
+        <view class='text_content'>11月19日晚，“第32个国际志愿者日”大型公益晚会组委会第三次会议于福建省正能量公益服务中心会议室成功召开，参会人员就本场盛会的嘉宾邀请、节目审核、演出彩排、志愿者表彰等议题进行讨论并达成共识。晚会副总策划、民间公益践行者、龙岩市中小企业发展商会秘书长陈忠铭应邀全程参与。晚会定于12月2日晚在龙岩市新罗区东宫下侨声大剧院感恩举办，请支持过发展商会公益活动的嘉宾做好出席准备。</view>
+      </view>
+  </view>
+
+  <view class='neiro'>
+      <view class='neiro_image'>
+        <image class='image' src='https://05.imgmini.eastday.com/mobile/20171120/20171120085014_56c83145a5349e79f6a704103194a42f_3.jpeg'></image>
+      </view>
+      <view class='neiro_text'>
+        <view class='text_title'>可回收材料建成的房子 “化腐朽为神奇”</view>
+        <view class='text_content'>在美国新墨西哥洲的这类型房子，人们可以从屋顶上和融雪中收集水 ，将这些水储存在蓄水池中，用于洗澡，洗碗和洗衣服。也可以把这些水在过滤系统中过滤一遍，输送到太阳能热水器和压力罐。这样子大大节省了能源。</view>
+      </view>
+  </view>
+  <!-- <image class='menu_img' src='/assets/images/find/goyi/dotai.jpg'></image> -->
 </view>

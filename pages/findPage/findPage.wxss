@@ -5,7 +5,7 @@
  * 
  * */
  page{
-   background-color: #E8EFEF;
+   background-color: #Efefef;
  }
 
  .find_img{
@@ -50,7 +50,7 @@
  .menu_v{
   height: 130rpx;
   line-height: 130rpx;
-   font-size: 70rpx;
+   font-size: 60rpx;
    color: #aaa;
    margin-right: 20rpx;
    float: right;

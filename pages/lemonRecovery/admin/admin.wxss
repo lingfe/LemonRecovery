@@ -85,8 +85,8 @@ width:100%;
   transition:transform .3s,-webkit-transform .3s;
 
 }
-
 /*预约数据*/
+
  .list{
   width: 100%;
   height: auto;
@@ -96,7 +96,7 @@ width:100%;
    width: 90%;
    height: auto;
    background-color:#fff;
-   font-size: 26rpx;
+   font-size: 24rpx;
    color: #666; 
    margin:20rpx auto;
    border: 1rpx solid #fff;
@@ -104,20 +104,60 @@ width:100%;
  }
  .item{
   width: 90%;
-  margin-top:20rpx;
-  margin-left: 20rpx;
   background-color: #fff;
  }
+  .item_text{
+   width: 90%;
+   margin-top:20rpx;
+   margin-left: 20rpx;
+ /** overflow: hidden; 自动隐藏文字*/
+  text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+   white-space: nowrap; /*强制不换行 */
+ }
+ .item_static{
+   width: 26%;
+   float: right;
+   margin-top: -32rpx;
+   font-size: 26rpx;
+   text-align: center;
+   
+ }
+ .item_static_img{
+   width: 40rpx;
+   height: 40rpx;
+   border-radius: 30px;
+ }
+ .item_static_text{
+   position: relative;
+   top: -8rpx;
+   left: 20rpx;
+ }
+
+.item_border{
+  width: 90%;
+  margin-top:20rpx;
+  margin-left: 20rpx;
+  border-top: 1rpx #aaa solid;
+  background-color: #fff;
+}
+
+.item_btn{
+  width: 24%;
+   float: right;
+   margin-top: -200rpx;
+   font-size: 26rpx;
+   text-align: center;
+}
 
  .list_item_img{
    width: 90%;
    height: 240rpx;
    font-size: 26rpx;
+   color: #666; 
    margin:20rpx auto;
    border: 1rpx solid #F7F8F3;
-   /* background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3235371633,811784834&fm=27&gp=0.jpg');
    background-repeat: no-repeat;
-   background-size: 100% 100%; */
+   background-size: 100% 100%; 
  }
 .item_img{
   width: 90%;
@@ -127,19 +167,170 @@ width:100%;
   margin-left: 20rpx;
 }
 
-/*处理按钮*/
-.btn{
+/*表单*/
+.Calculationlist{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  background: rgba(0,0,0,0.8);
+}
+
+.huishou_form{
+  width: 80%;
+  height:770rpx;
+  position:relative;
+  margin: 0rpx auto;
+  background-color: #fff;
+  top: 175rpx;
+  border-radius: 10px;
+}
+
+.form{
+  position: relative;
+  top: 20rpx;
+  width: 70%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0px auto;
+  font-size: 24rpx;
+}
+.form_text{
+  position: relative;
+  top: 20rpx;
+  width: 70%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0px auto;
+  font-size: 24rpx;
+}
+.text_text{
+    width: 50%;
+    font-size: 24rpx;
+    color: #aaa;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.text_text_last{
+    width: 60%;
+    font-size: 24rpx;
+    color: #aaa;
+    height: 50rpx;
+    line-height: 50rpx;
+    float: left;
+}
+.text_text_right{
+    width: 40%;
+    font-size: 24rpx;
+    color: #aaa;
+    height: 50rpx;
+    text-align: right;
+    line-height: 50rpx;
+    float: right;
+}
+.form_frist{
+  position: relative;
+  top: 20rpx;
+  width: 70%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 30rpx;
+}
+
+.form_last{
+  position: relative;
+  top: 40rpx;
+  width: 50%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0px auto;
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: #EDE03A;
+  color: #666;
+}
+
+.form_last:active{
+  background-color: #EACF02;
+}
+.title{
+  color: #999999;
+  float: left;
+  font-size: 26rpx;
+}
+.title_img{
+  width: 20rpx;
+  height: 20rpx;
+}
+.span{
+  color: #14bac8;
+}
+
+/*文本框默认属性*/
+.input-placeholder {
+  font-size: 26rpx;
+  font-family: "黑体";
+  color: #CCCCCC;
+}
+.input_other{
+  width: 200rpx;
+  float: left;
+  position: relative;
+  top: 22rpx;
+  color: #000000;
+  margin-left: 100rpx;
+}
+.input{
+  width: 270rpx;
+  float: left;
+  position: relative;
+  top: 22rpx;
+  color: #000000;
+  margin-left: 40rpx;
+}
+
+/*按钮*/
+.consultation_bottom_btn{
   width: 150rpx;
   height: 50rpx;
   line-height: 50rpx;
-  margin: 0px auto;
-  margin-top: 20rpx;
   text-align: center;
   font-size: 22rpx;
+  margin-left: 20rpx;
+  margin-bottom: 56rpx;
   background-color: #E9F01D;
-  border-radius: 10px;
-  color: #000;
+  color: #fff;
 }
-.btn:active{
+.consultation_bottom_btn:active{
   background-color: #EACF02;
+}
+
+
+button[type="primary"] {
+  color: #fff;
+  background-color: #14bac8;
+  border-radius: 8px;
+}
+
+.button-hover[type="primary"] {
+  background-color: #14bac8;
+}
+
+button::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #e8efef;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
 }

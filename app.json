@@ -13,7 +13,8 @@
     "pages/findPage/myPoints/pointsOrder/pointsOrder",
     "pages/findPage/myPoints/exchange/exchange",
     "pages/findPage/lemonCommonweal/gyDynamic/gyDynamic",
-    "pages/findPage/gyLemon/gyLemon"
+    "pages/findPage/gyLemon/gyLemon",
+    "pages/findPage/myPoints/IntegralRecord/IntegralRecord"
   ],
   "window": {
     "backgroundTextStyle": "light",

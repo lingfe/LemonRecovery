@@ -54,8 +54,8 @@
 .breathing{
   position: relative;
   top: 30rpx;
-  left: 138rpx;
-  width: 160rpx;
+  left: 14%;
+  width: 20%;
   height: 150rpx;
   float: left;
   text-align: center;
@@ -82,8 +82,8 @@
   display: block;
   position: relative;
   top: 50rpx;
-  left: 120rpx;
-  width: 100rpx;
+  left: 14%;
+  width: 20%;
   height: 150rpx;
   float: left;
   text-align: right;
@@ -112,14 +112,14 @@
 }
 .my{
   position: relative;
-  width: 150rpx;
+  width: 26%;
   height: 110rpx;
   line-height: 110rpx;
   font-size: 26rpx;
   text-align: center;
   float: left;
   margin-top: 20rpx;
-  margin-left: 50rpx;
+  margin-left: 6%;
 }
 
 /*新的伙伴*/
@@ -152,22 +152,19 @@
   width: 60rpx;
   height: 60rpx;
   float: left;
-  margin-left: 80rpx;
+  margin-left: 6%;
   border-radius: 50px;
 }
 .partner_name{
   float: left;
   line-height: 60rpx;
   margin-left: 10rpx;
+  
 }
 .partner_right{
 
-  float: left;
-  line-height: 60rpx;
-  margin-left: 10rpx;
-}
-.partner_right{
   float: right;
+  line-height: 60rpx;  
   font-size: 20rpx;
   margin-right: 20rpx;
 }
@@ -286,7 +283,7 @@ button::after {
   font-size: 26rpx;
   position: relative;
   top:-80rpx;
-  left: 30rpx;
+  left: 26%;
   color: #666;
   text-align: center;
 }

@@ -24,6 +24,7 @@
    width: 94%;
    margin: auto;
    height: auto;
+   margin-bottom: 20rpx;
    background-color: #fff;
  }
  .list_item{
@@ -92,7 +93,7 @@
    margin-right: 20rpx;
  }
 
- .btn{
+ .btn0{
    width: 80%;
    height: 60rpx;
    line-height: 60rpx;
@@ -102,6 +103,17 @@
    background-color: yellow;
    text-align: center;
  }
+
+ .btn1{
+   width: 80%;
+   height: 60rpx;
+   line-height: 60rpx;
+   margin-top: 20rpx;
+   font-size: 26rpx;
+   margin-left: 20rpx;
+   text-align: center;
+ }
+
  .time_coum_img{
      width: 10%;
   height: 26rpx;

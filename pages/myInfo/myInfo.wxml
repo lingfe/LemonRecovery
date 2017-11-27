@@ -19,7 +19,7 @@
       <view class='breathing' bindtap='userinfoBtntap'>
         <view class='breathing_breathing'>贡献资源</view>
         <view class='breathing_'>—</view>
-        <view class='breathing_text'>0次</view>
+        <view class='breathing_text'>{{myContribution.resourceContribution}}斤</view>
       </view>
       <!-- 贡献资源 end-->
 
@@ -27,7 +27,7 @@
       <view class='breathing'>
         <view class='breathing_breathing'>柠檬积分</view>
         <view class='breathing_'>—</view>
-        <view class='breathing_text'>0分</view>
+        <view class='breathing_text'>{{myContribution.lemonIntegral}}分</view>
       </view>
       <!-- 柠檬积分 end-->
 

@@ -178,7 +178,7 @@ Page({
             return;
           };
           //提示
-          wx.showToast({ title: res.data.message, icon: 'ok', duration: 2000, });
+         // wx.showToast({ title: res.data.message, icon: 'ok', duration: 2000, });
           //得到cookie
           var cookie = res.header["Set-Cookie"].split(",")[0].split(";")[0] + ";";
 

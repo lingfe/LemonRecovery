@@ -27,7 +27,7 @@ page{
    font-size: 24rpx;
  }
  .top_btn{
-   width: 60%;
+   width: 62%;
    margin: auto;
    font-size: 26rpx;
    text-align: center;

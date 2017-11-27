@@ -11,16 +11,16 @@
       <view class='list_item'>
         <!-- 参数  start -->
         <view class='item_img'>
-          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/myInfo.jpg'></image>
+          <image class='img' src='{{info.imgUrl}}'></image>
           <view class='text'>
-            <view class='text_title'>正品得力A试纸</view>
+            <view class='text_title'>{{info.title}}</view>
             <view class='text_proices'>
             <image class='time_coum_img' src='/assets/images/find/gy.png'></image>
-            <span class="span">76</span></view>
-            <view class='text_shengyu'>剩余: 100</view>
+            <span class="span">{{info.integral}}</span></view>
+            <view class='text_shengyu'>剩余: {{form.surplus}}</view>
             <view class='text_input'>
               <view class='input_js' bindtap='bindtapJian'>-</view>
-              <view class='input_js'>{{num}}</view>
+              <view class='input_js'>{{form.num}}</view>
               <view class='input_js' bindtap='bindtapJia'>+</view>
             </view>
           </view>
@@ -41,32 +41,32 @@
           <view class='menu'>
             <view class='menu_title'>联系人</view>
             <view class='menu_input'>
-                <input class='input' placeholder='请输入联系人'></input>
+                <input class='input' value='{{form.contactPeople}}' bindinput='inputcontactPeople' placeholder='请输入联系人'></input>
             </view>
           </view>
           <view class='menu' bindtap='bindtapLemonCommonweal'>
             <view class='menu_title'>联系电话</view>
             <view class='menu_input'>
-                <input class='input' placeholder='请输入联系电话'></input>
+                <input class='input' value='{{form.phone}}' bindinput='inputphone' placeholder='请输入联系电话'></input>
             </view>
           </view>
           <view class='menu'>
             <view class='menu_title'>详细地址</view>
             <view class='menu_input'>
-                <input class='input' placeholder='请输入详细地址'></input>
+                <input class='input' value='{{form.adressInfo}}' bindinput='inputadressInfo' placeholder='请输入详细地址'></input>
             </view>
           </view>
           <view class='menu'>
-            <button class='form_last' form-type="submit">确认兑换</button>
+            <button class='form_last' bindtap='submitOrder'>确认兑换</button>
           </view>
         </view>
         <!-- 表单 end -->
 
         <view class='time_time'>
-          2017-11-08 13:41  12345678901
+          {{info.cdate}}
         </view>
         <view class='time_coum'>
-          合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>76
+          合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{info.integral * form.num}}
         </view>
       </view>
     </view>

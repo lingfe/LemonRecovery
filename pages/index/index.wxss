@@ -10,6 +10,7 @@
 .page{
   margin: 0;
   padding: 0;
+  background-color: #Efefef;
 }
 
 /*背景*/
@@ -28,7 +29,7 @@
   position:relative;
   margin: 0rpx auto;
   background-color: #fff;
-  top: 175rpx;
+  top: 170rpx;
   border-radius: 10px;
 }
 
@@ -92,20 +93,20 @@ button::after {
   color: #CCCCCC;
 }
 .input_other{
-  width: 200rpx;
+  width: 36%;
   float: left;
   position: relative;
   top: 22rpx;
   color: #000000;
-  margin-left: 100rpx;
+  margin-left: 7%;
 }
 .input{
-  width: 400rpx;
+  width: 60%;
   float: left;
   position: relative;
   top: 22rpx;
   color: #000000;
-  margin-left: 100rpx;
+  margin-left: 7%;
 }
 
 /*文本*/
@@ -146,8 +147,9 @@ button::after {
 /*回收清单*/
 .recyclingList{
   width: 100%;
-  height: auto;
+  height: 270rpx;
   position: relative;
+  background-color: #fff;
   top: 100rpx;
 }
 .recyclingList_title{
@@ -165,7 +167,7 @@ button::after {
   border-radius: 50rpx;
   position: absolute;
   margin-top: 30rpx;
-  margin-left: 220rpx;
+  margin-left: 30%;
 }
 .recyclingList_content{
   width: 100%;
@@ -173,27 +175,29 @@ button::after {
 }
 .swiper {
   display:block;
-  height:100px;
+  height:97px;
 }
 .content{
   width: 90%;
   margin: 0rpx auto;
+  margin-left: 15%;
 }
 .conten_content{
-  width: 100rpx;
+  width: 32%;
   height: 100rpx;
   float: left;
   font-size: 26rpx;
-  margin-left: 97rpx;
+  margin-left: 0rpx;
 }
 .content_img{
-  width: 60rpx;
-  height: 70rpx;
-  margin-left: 20rpx;
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 14%;
+  margin-top: 30rpx;
 }
 .content_text{
   width: 100rpx;
-  font-size: 34rpx;
+  font-size: 26rpx;
   color: #666;
   text-align: center;
 }
