@@ -31,8 +31,10 @@
         <!-- 使用规则 start -->
         <view class='remak'>
           <view class='time_text'>使用规则:</view>
-          <view class='time_text'>1.水电费水电费水电费是</view>
-          <view class='time_text'>2.沙发斯蒂芬水电费水电费水电费水电费第三方士大夫是的</view>
+          <view class='time_text'>1.用户通过积分兑换后，平台将从后台发货，届时点击可查看物流状态。</view>
+          <view class='time_text'>2.商品一旦确认兑换，将无法退款。</view>
+          <view class='time_text'>3.若一直未收到商品，可拨打人工客服咨询。</view>
+          <view class='time_text'>4.柠檬积分获取方式：填写订单，工作人员上门验收后，核销计分。</view>
         </view>
         <!-- 使用规则 end -->
 
@@ -56,18 +58,19 @@
                 <input class='input' value='{{form.adressInfo}}' bindinput='inputadressInfo' placeholder='请输入详细地址'></input>
             </view>
           </view>
+          <view class=''>
+            <view class='time_time'>
+              {{info.cdate}}
+            </view>
+            <view class='time_coum'>
+              合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{info.integral * form.num}}
+            </view>
+          </view>
           <view class='menu'>
             <button class='form_last' bindtap='submitOrder'>确认兑换</button>
           </view>
         </view>
         <!-- 表单 end -->
-
-        <view class='time_time'>
-          {{info.cdate}}
-        </view>
-        <view class='time_coum'>
-          合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{info.integral * form.num}}
-        </view>
       </view>
     </view>
   </view>

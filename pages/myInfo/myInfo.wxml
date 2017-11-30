@@ -44,7 +44,7 @@
   <view class='myContribution'>
     <view class='myContribution_view'>
       <view class='my' bindtap='bindtapReservation'>
-        <image class='content_img' src='/assets/images/myinfo/my_gx.png' />
+        <image class='content_img' src='/assets/images/myinfo/my_yy.png' />
         <view class='content_text'>我的预约</view>
       </view>
       <view class='my'>|</view>
@@ -60,27 +60,21 @@
   <view class='partner'>
     <view class='partner_partner'>氧 气 榜 单</view>
     <view class='partner_partner'>
-      <swiper class='swiper' autoplay="true" circular="true" vertical="true" interval="3000" duration="1000">
-       <block wx:for="{{imgUrls}}">
+       <block wx:for="{{myContributionAll}}" wx:key="*this">
         <!-- <swiper-item style="height:0%;">      -->
         <view class='partner_title'>
-          <image class='img' src='https://static.daho.club/static/upload/LemonRecovery/assets/images/bg.png' class='img'/>
-          <view class='partner_name'>蒋鹏{{index}}</view>
-          <view class='partner_right'>为<span class="span">贵阳市</span>贡献了<span class="span">360</span>斤可回收资源</view>
+          <image class='img' src='{{item.avatarUrl}}' class='img'/>
+          <view class='partner_name'>{{item.userName}}</view>
+          <view class='partner_right'>为
+            <span class="span">贵阳市</span>贡献了
+            <span class="span">{{item.resourceContribution}}</span>斤可回收资源
+          </view>
         </view>
         <!-- </swiper-item>  -->
       </block> 
-      </swiper>
     </view>
   </view>
   <!-- 新的伙伴 end-->
-  
-  <!-- 咨询柠檬 start-->
-  <view class='consultation_bottom'>
-    <view class='consultation_bottom_text'>功能拼命搭建中..</view>
-    <button class='consultation_bottom_btn' bindtap='consultationBtntap' form-type="submit">咨询柠檬</button>
-  </view>
-  <!-- 咨询柠檬 end-->
 </view>
 
 <!--二维码 start-->

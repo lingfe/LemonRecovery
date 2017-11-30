@@ -16,7 +16,7 @@ Page({
       contactPeople:null, //联系人
       phone:null, //联系电话
       adressInfo:null,//详细地址
-      num: 1,   //数量
+      num: 0,   //数量
       surplus:0,//剩余
     },
   },
@@ -78,6 +78,13 @@ Page({
     var that=this;
     var form=that.data.form;
     var info=that.data.info;
+
+    if(form.num<=0){
+      //提示
+      that.showModal('请选择兑换数量!');
+      return;
+    }
+
     //验证非空
     if (app.checkInput(form.contactPeople)){
       that.showModal('联系人不能为空!');
@@ -91,6 +98,12 @@ Page({
 
     if (app.checkInput(form.adressInfo)){
       that.showModal("详细地址不能为空!");
+      return;
+    }
+
+    var lemonIntegral = (that.data.form.num * that.data.info.surplus);
+    if (that.data.lemonIntegral < lemonIntegral){
+      that.showModal("您的积分不足，兑换失败!");
       return;
     }
 
@@ -122,13 +135,24 @@ Page({
         }
       })
     };
-    //发送请求
-    app.request.reqPost(url, header, data, function (res) {
-      that.showModal("兑换成功!");
-      //修改库存
-      that.updateNum(that);
-    });
 
+    //提示
+    wx.showModal({
+      title: '确认兑换',
+      content: '是否确认？',
+      confirmText: "确定",
+      cancelText: "取消",
+      success: function (res) {
+        console.log(res);
+        if (res.confirm) {
+          //发送请求
+          app.request.reqPost(url, header, data, function (res) {
+            //修改库存
+            that.updateNum(that);
+          });
+        }
+      }
+    });
   },
 
   //清空表单
@@ -166,10 +190,58 @@ Page({
     };
     //发送请求
     app.request.reqPost(url, header, data, function (res) {
+      //修改贡献积分
+      that.setUpdateLemonIntegral(that);
+    });
+  },
+
+  //修改柠檬积分
+  setUpdateLemonIntegral:function(that){
+    var url = app.config.basePath_web + "api/exe/save";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var lemonIntegral = (that.data.lemonIntegral - (that.data.form.num * that.data.info.surplus));
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //兑换商品表
+        scriptName: 'Query',
+        cudScriptName: 'Update',
+        nameSpaceMap: {
+          rows: [{
+            lemonIntegral: lemonIntegral,
+            id: that.data.myContributionId,
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
       //清空表单
       that.closeForm(that);
       //根据id获取兑换商品
       that.getconvertibleCommodityId(that);
+      
+      //提示
+      wx.showModal({
+        title: '兑换成功!',
+        content: '是否继续?',
+        confirmText: "继续",
+        cancelText: "返回",
+        success: function (res) {
+          if (!res.confirm) {
+            //得到打开的页面
+            var pages = getCurrentPages();
+            var currPage = pages[pages.length - 1];   //当前页面
+            var prevPage = pages[pages.length - 2];   //上一个页面
+
+            //返回上一页
+            wx.navigateBack();
+          }
+        }
+      })
     });
   },
 
@@ -180,6 +252,8 @@ Page({
     var that = this;
     that.setData({
       id: options.id,
+      myContributionId: options.myContributionId,
+      lemonIntegral: options.lemonIntegral,
     });
     //根据id获取兑换商品
     that.getconvertibleCommodityId(that);
@@ -208,10 +282,20 @@ Page({
     app.request.reqPost(url, header, data, function (res) {
       var info = res.data.rows;
       if (info.length != 0) {
-        that.setData({
-          info: info[0],
-          'form.surplus': (info[0].surplus - 1)
-        });
+        if (info[0].surplus <=0 ){
+          that.setData({
+            info: info[0],
+            'form.surplus': 0,
+          });
+          //提示
+          that.showModal('商品剩余不足不能兑换!');
+        }else{
+          that.setData({
+            info: info[0],
+            'form.num': 1,
+            'form.surplus': (info[0].surplus - 1)
+          });
+        }
       }
     });
   },

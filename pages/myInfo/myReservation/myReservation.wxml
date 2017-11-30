@@ -16,7 +16,8 @@
       <view class='item'>
         <view class='item_text'>下单时间: {{item.cdate}}</view>
         <view class='item_static' wx:if="{{item.state==0}}">
-          <image class='item_static_img' src='/assets/images/myinfo/phone.png'/><text class='item_static_text'>已提交</text>
+          <image class='item_static_img' bindtap='bindtapPhone' src='/assets/images/myinfo/phone.png'/>
+          <text class='item_static_text'>已提交</text>
         </view>
         <view class='item_static' wx:elif="{{item.state==1}}">
           <text class='item_static_text'>已完成</text>

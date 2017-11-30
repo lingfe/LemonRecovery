@@ -29,6 +29,24 @@ Page({
     }
   },
 
+  //拨打用户电话
+  bindtapPhone: function (e) {
+    var that = this;
+    wx.showModal({
+      title: '拨打用户电话',
+      content: '是否确定拨打？' + e.currentTarget.id,
+      confirmText: "确定",
+      cancelText: "取消",
+      success: function (res) {
+        if (res.confirm) {
+          wx.makePhoneCall({
+            phoneNumber: e.currentTarget.id
+          });
+        }
+      }
+    });
+  },
+
   //旧衣
   inputusedClothes:function(e){
     var that=this;

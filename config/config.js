@@ -1,6 +1,6 @@
 export default {
 	// 线上环境
-  basePath_web: 'https://web.daho.club/',
+  basePath_web: 'https://ningmeng.daho.club/',
   basePath_sys: 'https://sys.daho.club/',
   // 上传图片地址
   domain: 'https://web.daho.club/upload/doUpload',

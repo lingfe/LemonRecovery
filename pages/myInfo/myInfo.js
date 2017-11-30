@@ -8,12 +8,6 @@ var app=getApp();
 
 Page({
   data:{
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-    ],
     admin: ["oh4300CxufSClVEil0k7xNy24P5A", "oNWj80C6zKPwL2_muS08iIVtGhkA", "oh4300DFZdBeIGOoVKQK9OFuyPps", "oh4300BzivzPyMq9Uk05pF_GaVoc","oh4300LBMs6n0ylQ1H3XK1jC90YU"]
   }, 
 
@@ -73,6 +67,8 @@ Page({
         cudScriptName: 'Save',
         nameSpaceMap: {
           rows: [{
+            avatarUrl: that.data.userInfo.avatarUrl,//头像
+            userName: that.data.userInfo.cnName,//名称
             personalId: wx.getStorageSync("personalId"),  //用户id
           }]
         }
@@ -87,23 +83,52 @@ Page({
     });
   },
 
-  //页面加载
-  onLoad: function (options) {
-    var that= this;
-
-    var userinfo=wx.getStorageSync('user');
-    that.setData({ userInfo: userinfo });
-  },
-
   //页面显示时执行
   onShow:function(){
     var that = this;
 
-    //获取我的贡献资源
+    //获取用户信息
+    var userinfo = wx.getStorageSync('user');
+    that.setData({ userInfo: userinfo });
+    //获取我的贡献资源,个人
     that.getContribtion(that);
+    //获取我的贡献资源,所有
+    that.getContribtionAll(that);
   },
 
-  //获取我的贡献资源
+  //获取我的贡献资源,所有
+  getContribtionAll: function (that) {
+    var url = app.config.basePath_web + "api/exe/get";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //我的贡献表
+        scriptName: 'Query',
+        nameSpaceMap: {
+          rows: [{
+            state:0,  //状态，0=正常  
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      //验证是否为空如果为空就生成一条贡献
+      if (!app.checkInput(res.data.rows)) {
+        var rows = res.data.rows;
+        that.setData({
+          myContributionAll: rows,
+        });
+      }
+    });
+  },
+
+  //获取我的贡献资源,个人
   getContribtion:function(that){
     var url = app.config.basePath_web + "api/exe/get";
     //请求头

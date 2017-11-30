@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -86,7 +86,7 @@
 				{
 					"id": 10,
 					"name": "关于柠檬",
-					"pathName": "pages/findPage/gyLemon/gyLemon",
+					"pathName": "pages/findPage/lemonCommonweal/gyDynamic/newsInformation/newsInformation",
 					"query": ""
 				}
 			]

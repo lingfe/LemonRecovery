@@ -28,7 +28,7 @@
   <view class='square'>
     <view class='square_title'>兑换广场</view>
     <view class='square_content'>
-      <navigator url='/pages/findPage/myPoints/exchange/exchange?id={{item.id}}'wx:for="{{list}}" wx:key="*this">
+      <navigator url='/pages/findPage/myPoints/exchange/exchange?id={{item.id}}&lemonIntegral={{myContribution.lemonIntegral}}&myContributionId={{myContribution.id}}'wx:for="{{list}}" wx:key="*this">
       <view class='content'>
         <image class='content_img' src='{{item.imgUrl}}'></image>
         <view class='content_title'>{{item.title}}</view>

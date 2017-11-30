@@ -18,8 +18,9 @@
           </view>
         </view>
         <view class='item_btn'>
-          <view class='btn0' id="{{item.id}}" wx:if="{{item.state == 0}}" bindtap='bindtapConfirmReceipt'>确认收货</view>
-          <view class='btn1' id="{{item.id}}" wx:if="{{item.state == 1}}" bindtap='bindtapConfirmReceipt'>已完成</view>
+          <view class='btn1' id="{{item.id}}" wx:if="{{item.state == 0}}" >已下单</view>
+          <view class='btn1' id="{{item.id}}" wx:if="{{item.state == 1}}" >已发货</view>
+          <view class='btn0' id="{{item.id}}" wx:if="{{item.state == 1}}" bindtap='bindtapConfirmReceipt'>确认收货</view>
         </view>
       </view>
       <view class='list_time'>

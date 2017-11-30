@@ -1,0 +1,15 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-29
+ *   描述:  新闻详细
+ * 
+ * */-->
+<view class='page'>
+  <view class='newsInfo'> 
+    <view class='title'>{{lemonDynamic.title}}</view>
+    <view class='imgUrl'>
+      <image src='{{lemonDynamic.imgUrl}}' class='img'></image>
+    </view>
+    <view class='content'>{{lemonDynamic.content}}</view>
+  </view>
+</view>

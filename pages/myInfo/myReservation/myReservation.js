@@ -14,6 +14,25 @@ Page({
   data: {
     list:null,
     cst:false,      //隐藏
+    phone: '18585904321',//收集员,客服电话
+  },
+
+  //拨打收集员,客服电话
+  bindtapPhone: function () {
+    var that = this;
+    wx.showModal({
+      title: '拨打收集员电话',
+      content: '是否确定拨打？' + that.data.phone,
+      confirmText: "确定",
+      cancelText: "取消",
+      success: function (res) {
+        if (res.confirm) {
+          wx.makePhoneCall({
+            phoneNumber: that.data.phone
+          });
+        }
+      }
+    });
   },
 
   //取消预约

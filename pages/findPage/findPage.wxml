@@ -6,7 +6,7 @@
  * */-->
 <view class='page'>
   <view class='find_img'>
-    <image class='img' src='/assets/images/find/gy.png'></image>
+    <image class='img' src='/assets/images/fax.jpg'></image>
   </view>
   <view class='find_menu'>
     <view class='menu' bindtap='bindtapGyLemon'>

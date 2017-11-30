@@ -1,0 +1,31 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-29
+ *   描述:  新闻详细
+ * 
+ * */
+ 
+ .newsInfo{
+   width: 100%;
+   height: 100%;
+
+ }
+ .title{
+   width: 100%;
+   text-align: center;
+   font-size: 30rpx;
+   padding: 10rpx;
+ }
+ .imgUrl{
+   width: 100%;
+   height: 30%;
+ }
+ .img{
+   width: 100%; 
+ }
+ .content{
+    width: 98%;
+   font-size: 30rpx;
+   margin: auto;
+   padding: 10rpx;
+ }

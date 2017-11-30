@@ -33,7 +33,7 @@ Page({
         cudScriptName: 'Update',
         nameSpaceMap: {
           rows: [{
-            state: 1,    //状态,0=已提交,1=已完成
+            state: 2,    //状态,0=（已下单,未发货）,1=（已发货,未确认),2=(已收货,已确认)
             personalId: wx.getStorageSync('personalId'),//用户id
             id: id,  //订单id
           }]
@@ -41,11 +41,23 @@ Page({
       })
     };
 
-    //发送请求
-    app.request.reqPost(url, header, data, function (res) {
-      console.log(res);
-      //获取我的兑换订单
-      that.getMyconvertibleOrder(that);
+    //提示
+    wx.showModal({
+      title: '确认收货',
+      content: '是否确认？',
+      confirmText: "确定",
+      cancelText: "取消",
+      success: function (res) {
+        console.log(res);
+        if (res.confirm) {
+          //发送请求
+          app.request.reqPost(url, header, data, function (res) {
+            console.log(res);
+            //获取我的兑换订单
+            that.getMyconvertibleOrder(that);
+          });
+        }
+      }
     });
   },
 
@@ -71,6 +83,7 @@ Page({
         nameSpace: 'convertibleOrder',           //兑换订单表
         scriptName: 'Query',
         nameSpaceMap: {
+          orderByClause: 'mdate desc',
           rows: [{
             personalId: wx.getStorageSync("personalId"),  //用户id
           }]

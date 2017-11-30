@@ -29,15 +29,20 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  //页面显示执行
+  onShow:function(){
     var that = this;
     //获取我的贡献资源
     that.getContribtion(that);
     //获取兑换商品信息
     that.getconvertibleCommodity(that);
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
   },
 
   //获取我的贡献资源
@@ -109,13 +114,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
   
   },
 

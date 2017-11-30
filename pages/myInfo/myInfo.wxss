@@ -56,6 +56,7 @@
   top: 30rpx;
   left: 14%;
   width: 20%;
+  margin-right: 6%;
   height: 150rpx;
   float: left;
   text-align: center;
@@ -83,7 +84,6 @@
   position: relative;
   top: 50rpx;
   left: 14%;
-  width: 20%;
   height: 150rpx;
   float: left;
   text-align: right;
@@ -91,7 +91,6 @@
 .consultation_text{
     position: relative;
     top: 120rpx;
-    width: 100rpx;
     font-size: 16rpx;
     color: #aaa;
 }
@@ -126,8 +125,6 @@
 .partner{
   display: block;
   width: 100%;
-  height: 500rpx;
-  background-color: #fff;
   position:relative;
   top: 150rpx;
 }
@@ -137,14 +134,18 @@
    width: 100%;
    font-size: 26rpx;
    color: #666;
+   padding-top: 30rpx;
+   padding-bottom: 20rpx;
+   background-color: #fff;
    text-align: center;
 }
 .partner_title{
   width: 100%;
-  margin-top: 30rpx;
-  height: auto;
+  /* padding-top: 20rpx; */
+  padding-bottom: 20rpx;
+  height: 60rpx;
   position:relative;
-  top: 30rpx;
+  background-color: #fff;
   bottom: 10rpx;
   float: left;
 }
@@ -165,7 +166,7 @@
 
   float: right;
   line-height: 60rpx;  
-  font-size: 20rpx;
+  font-size: 26rpx;
   margin-right: 20rpx;
 }
 
@@ -269,12 +270,12 @@ button::after {
 
 .span{
   color: #14bac8;
-  text-decoration:underline;
+  /* text-decoration:underline; */
 }
 
 /*图片*/
 .content_img{
-  width: 110rpx;
+  width: 80rpx;
   height: 80rpx;
   margin-left: 20rpx;
 }

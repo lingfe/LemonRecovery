@@ -35,7 +35,8 @@
             <view class='item'>
               <view class='item_text'>下单时间: {{item.cdate}}</view>
               <view class='item_static' wx:if="{{item.state==0}}">
-                <image class='item_static_img' src='/assets/images/myinfo/phone.png'/><text class='item_static_text'>未处理</text>
+                <image class='item_static_img' id="{{item.phone}}" bindtap='bindtapPhone' src='/assets/images/myinfo/phone.png'/>
+                <text class='item_static_text'>未处理</text>
               </view>
             </view>
             <view class='item_border'></view>

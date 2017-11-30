@@ -14,7 +14,8 @@
     "pages/findPage/myPoints/exchange/exchange",
     "pages/findPage/lemonCommonweal/gyDynamic/gyDynamic",
     "pages/findPage/gyLemon/gyLemon",
-    "pages/findPage/myPoints/IntegralRecord/IntegralRecord"
+    "pages/findPage/myPoints/IntegralRecord/IntegralRecord",
+    "pages/findPage/lemonCommonweal/gyDynamic/newsInformation/newsInformation"
   ],
   "window": {
     "backgroundTextStyle": "light",

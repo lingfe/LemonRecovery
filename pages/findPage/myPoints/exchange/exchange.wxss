@@ -5,7 +5,7 @@
  * 
  * */
   page{
-   background-color: #E8EFEF;
+   background-color: #fff;
  }
 
  .myorder{
@@ -72,7 +72,7 @@
  }
  .text_proices{
    width: 80%;
-   text-align: center;
+   margin-left: 20rpx;
    font-size: 20rpx;
    height: 50rpx;
    line-height: 50rpx;
@@ -90,7 +90,7 @@
  .text_shengyu{
    font-size: 20rpx;
    width: 80%;
-   text-align: center;
+   margin-left: 20rpx;
    height: 50rpx;
    line-height: 50rpx;
  }
@@ -101,7 +101,7 @@
    text-align: center;
    height: 50rpx;
    line-height: 50rpx;
-   margin-left: 30rpx;
+   margin-left: 20rpx;
  }
  .input_js{
    width: 30%;
@@ -112,7 +112,7 @@
 
  /*使用规则*/
  .remak{
-   font-size: 26rpx;
+   font-size: 20rpx;
    margin-top: 30rpx;
  }
  .time_text{
@@ -151,7 +151,7 @@
   height: 90rpx;
   line-height: 90rpx;
   margin: 0px auto;
-  margin-top: 50rpx;
+  top: 20rpx;
   text-align: center;
   font-size: 28rpx;
   background-color: #EACF02;

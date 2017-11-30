@@ -39,7 +39,7 @@
 
 .data_datetime{
   float: left;
-  width: 60%;
+  width: 50%;
     overflow: hidden; /**自动隐藏文字*/
   text-overflow: ellipsis; /**文字隐藏后添加省略号*/
    white-space: nowrap; /*强制不换行 */
