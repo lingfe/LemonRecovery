@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -87,6 +87,12 @@
 					"id": 10,
 					"name": "关于柠檬",
 					"pathName": "pages/findPage/lemonCommonweal/gyDynamic/newsInformation/newsInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分交易",
+					"pathName": "pages/findPage/myPoints/integralTransaction/integralTransaction",
 					"query": ""
 				}
 			]

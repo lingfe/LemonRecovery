@@ -27,27 +27,20 @@ page{
    font-size: 24rpx;
  }
  .top_btn{
-   width: 62%;
+   width: 60%;
    margin: auto;
    font-size: 26rpx;
    text-align: center;
    margin-top: 20rpx;
  }
- .btn_1{
-   width: 40%;
-   height: 60rpx;
-   line-height: 60rpx;
-   background-color: yellow;
-   float: left;
-   margin-right: 20rpx;
- }
  .btn_order{
-   margin-left: 64rpx;
-   width: 40%;
+   margin-left: 20rpx;
+   width: 28%;
    height: 60rpx;
    line-height: 60rpx;
    float: left;
    background-color: yellow;
+   border-radius: 10rpx;
  }
 
  /*兑换广场*/

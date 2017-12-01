@@ -18,7 +18,8 @@
 
     <!-- 按钮 start -->
     <view class='top_btn'>
-      <view class='btn_1' bindtap='bindtapIntegralRecord'>积分纪录</view>
+      <view class='btn_order' bindtap='bindtapIntegralRecord'>积分纪录</view>
+      <view class='btn_order' bindtap='bindtaIntegralTransaction'>积分交易</view>
       <view class='btn_order' bindtap='bindtapPointsOrder'>兑换订单</view>
     </view>
     <!-- 按钮 end -->

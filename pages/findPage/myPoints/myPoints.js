@@ -22,6 +22,13 @@ Page({
     })
   },
 
+  //积分交易
+  bindtaIntegralTransaction:function(e){
+    wx.navigateTo({
+      url: "/pages/findPage/myPoints/integralTransaction/integralTransaction"
+    })
+  },
+
   //兑换订单
   bindtapPointsOrder:function(e){
     wx.navigateTo({

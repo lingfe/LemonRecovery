@@ -17,7 +17,7 @@ Page({
       phone:null, //联系电话
       adressInfo:null,//详细地址
       num: 0,   //数量
-      surplus:0,//剩余
+      surplus:0, //剩余
     },
   },
 
@@ -101,8 +101,10 @@ Page({
       return;
     }
 
-    var lemonIntegral = (that.data.form.num * that.data.info.surplus);
-    if (that.data.lemonIntegral < lemonIntegral){
+    var lemonIntegral = parseFloat(that.data.form.num * that.data.info.integral);
+    console.log("lemonIntegral:" + lemonIntegral);
+    console.log(that.data.lemonIntegral);
+    if (parseFloat(that.data.lemonIntegral) < lemonIntegral){
       that.showModal("您的积分不足，兑换失败!");
       return;
     }
@@ -201,12 +203,12 @@ Page({
     //请求头
     var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
     //参数
-    var lemonIntegral = (that.data.lemonIntegral - (that.data.form.num * that.data.info.surplus));
+    var lemonIntegral = (that.data.lemonIntegral - (that.data.form.num * that.data.info.integral));
     var data = {
       timeStamp: wx.getStorageSync("time"),
       token: wx.getStorageSync("token"),
       reqJson: JSON.stringify({
-        nameSpace: 'myContribution',           //兑换商品表
+        nameSpace: 'myContribution',           //我的贡献表
         scriptName: 'Query',
         cudScriptName: 'Update',
         nameSpaceMap: {
@@ -249,6 +251,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
     var that = this;
     that.setData({
       id: options.id,

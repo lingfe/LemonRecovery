@@ -15,7 +15,8 @@
     "pages/findPage/lemonCommonweal/gyDynamic/gyDynamic",
     "pages/findPage/gyLemon/gyLemon",
     "pages/findPage/myPoints/IntegralRecord/IntegralRecord",
-    "pages/findPage/lemonCommonweal/gyDynamic/newsInformation/newsInformation"
+    "pages/findPage/lemonCommonweal/gyDynamic/newsInformation/newsInformation",
+    "pages/findPage/myPoints/integralTransaction/integralTransaction"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,57 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-11-30
+ *   描述:  积分交易
+ * 
+ * */-->
+<view class='page'>
+  <view class='top'>
+    <!-- 标题 start -->
+    <view class='top_title'>
+      {{lemonIntegral}}
+    </view>
+    <!-- 标题 end -->
+
+    <!-- 文本 start -->
+    <view class='top_text'>我的积分</view>
+    <!-- 文本 end -->
+  </view>
+
+  <!-- 操作   start-->
+  <view class="pageScreen">
+    <view class='integral_left'>
+      <view class="so {{ isBltype == 'so' ?'active':'' }}" id="so" bindtap='bindtapIntegral'>送分</view>
+      <view class="shou {{ isBltype == 'shou' ?'active':'' }}" id="shou" bindtap='bindtapIntegral'>收分</view>
+    </view>
+    <view class="integral_right">
+      <view class="{{ isBltype == 'so' ?'':'isdisply' }}">
+        <view class="find_menu">
+            <view class='menu_input'>
+                <input class='input' bindinput='inputcontactPeople' type="digit" value='{{integral}}' placeholder='请输入送出的积分'></input>
+            </view>
+        </view>
+        <view class="find_menu">
+            <view class='menu_input'>
+                <input class='input' bindinput='inputPwd' value='{{pwd}}' placeholder='请输入领取密匙'></input>
+            </view>
+            <image class='img' src='/assets/images/index/whao.png' bindtap='bindtapbangzhu' />
+        </view>
+      </view>
+
+      <view class="{{ isBltype == 'shou' ?'':'isdisply' }}">
+        <view class="find_menu">
+            <view class='menu_input'>
+                <input class='input' bindinput='inputPwd' value='{{pwd}}' placeholder='请输入领取密匙'></input>
+            </view>
+            <image class='img' src='/assets/images/index/whao.png' bindtap='bindtapbangzhu' />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 操作   end-->
+
+  <!-- 按钮 start-->
+  <view class='btn_btn'>
+    <button class='form_last' bindtap='binSbmint'>提交</button>
+  </view>
+</view>
