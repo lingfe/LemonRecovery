@@ -220,17 +220,30 @@ Page({
         }
       })
     };
-    //发送请求
-    app.request.reqPost(url, header, data, function (res) {
-      if (!app.checkInput(res.data.rows)){
-        //修改我的柠檬积分
-        var lemonIntegral = (that.data.myContribution.lemonIntegral - res.data.rows[0].integral);
-        that.setUpdateLemonIntegral(that, lemonIntegral);
-        that.showModal("发送成功!");
-        that.setData({
-          pwd: '',
-          integral:'',
-        });
+
+    //提示
+    wx.showModal({
+      title: '提示',
+      content: '是否确定送分？',
+      confirmText: "确定",
+      cancelText: "取消",
+      success: function (res) {
+        console.log(res);
+        if (res.confirm) {
+          //发送请求
+          app.request.reqPost(url, header, data, function (res) {
+            if (!app.checkInput(res.data.rows)) {
+              //修改我的柠檬积分
+              var lemonIntegral = (that.data.myContribution.lemonIntegral - res.data.rows[0].integral);
+              that.setUpdateLemonIntegral(that, lemonIntegral);
+              that.showModal("发送成功!");
+              that.setData({
+                pwd: '',
+                integral: '',
+              });
+            }
+          });
+        }
       }
     });
   },

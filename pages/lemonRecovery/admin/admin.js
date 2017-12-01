@@ -270,14 +270,8 @@ Page({
     var form=that.data.form;
 
     //验证
-    if (app.checkInput(form.usedClothes)){
-      that.showModal("请输入旧衣斤数");
-      return;
-    } else if (app.checkInput(form.wastePaper)) {
-      that.showModal("请输入废纸斤数");
-      return;
-    } else if (app.checkInput(form.other)) {
-      that.showModal("请输入其他斤数");
+    if (form.usedClothes <= 0 && form.wastePaper <= 0 && form.other <= 0){
+      that.showModal("请输入斤数,至少输入一项!");
       return;
     }
 

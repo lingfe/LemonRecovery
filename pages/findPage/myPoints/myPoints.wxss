@@ -18,7 +18,7 @@ page{
 
  .top_title{
    width: 100%;
-   font-size: 50rpx;
+   font-size: 70rpx;
    text-align: center;
  }
  .top_text{
@@ -27,11 +27,11 @@ page{
    font-size: 24rpx;
  }
  .top_btn{
-   width: 60%;
+   width: 80%;
    margin: auto;
    font-size: 26rpx;
    text-align: center;
-   margin-top: 20rpx;
+   margin-top: 30rpx;
  }
  .btn_order{
    margin-left: 20rpx;
@@ -39,8 +39,14 @@ page{
    height: 60rpx;
    line-height: 60rpx;
    float: left;
-   background-color: yellow;
+   background-color: #EACF02;
    border-radius: 10rpx;
+   color: #fff;
+ }
+ .btn{
+   background-color: #fff;
+   border:1rpx solid #EACF02;
+   color: #EACF02;
  }
 
  /*兑换广场*/
@@ -62,7 +68,7 @@ page{
  }
  .content{
    width: 48%;
-   height: 500rpx;
+   padding-bottom: 20rpx;
    background-color: #fff;
    margin-left: 10rpx;
    margin-top: 10rpx;

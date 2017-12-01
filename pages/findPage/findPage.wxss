@@ -33,11 +33,11 @@
    box-shadow: 2px 2px 5px #aaa;
  }
  .menu_img{
-   width: 100rpx;
-   height: 100rpx;
+   width: 80rpx;
+   height: 80rpx;
    border-radius: 30px;
    margin-left: 20rpx;
-   margin-top: 15rpx;
+   margin-top: 30rpx;
    float: left;
  }
  .menu_text{
