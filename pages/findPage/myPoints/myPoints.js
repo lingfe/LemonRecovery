@@ -22,6 +22,20 @@ Page({
     })
   },
 
+  //提示框
+  showModal: function (msg) {
+    wx.showModal({
+      title: '提示',
+      content: msg,
+      showCancel: false,
+    });
+  },
+
+  //回收清单轮播提示
+  bindtapShow: function (e) {
+    this.showModal("处理旧衣给柠檬，可兑换柠檬积分。1斤旧衣=1分。");
+  },
+
   //积分交易
   bindtaIntegralTransaction:function(e){
     wx.navigateTo({

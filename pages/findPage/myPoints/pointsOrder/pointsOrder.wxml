@@ -28,7 +28,7 @@
           {{item.cdate}}
         </view>
         <view class='time_coum'>
-          合计<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{item.totalIntegral}}
+          合计<image class='time_coum_img' src='/assets/images/index1.png'></image>{{item.totalIntegral}}
         </view>
       </view>
     </view>

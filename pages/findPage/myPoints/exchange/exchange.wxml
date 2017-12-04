@@ -15,7 +15,7 @@
           <view class='text'>
             <view class='text_title'>{{info.title}}</view>
             <view class='text_proices'>
-            <image class='time_coum_img' src='/assets/images/find/gy.png'></image>
+            <image class='time_coum_img' src='/assets/images/index1.png'></image>
             <span class="span">{{info.integral}}</span></view>
             <view class='text_shengyu'>剩余: {{form.surplus}}</view>
             <view class='text_input'>
@@ -63,7 +63,7 @@
               {{info.cdate}}
             </view>
             <view class='time_coum'>
-              合计：<image class='time_coum_img' src='/assets/images/find/gy.png'></image>{{info.integral * form.num}}
+              合计：<image class='time_coum_img' src='/assets/images/index1.png'></image>{{info.integral * form.num}}
             </view>
           </view>
           <view class='menu'>

@@ -42,9 +42,15 @@ Page({
   //提示框
   showModal: function (msg) {
     wx.showModal({
-      title: msg,
+      title: '提示',
+      content:msg,
       showCancel: false,
     });
+  },
+
+  //回收清单轮播提示
+  bindtapShow:function(e){
+    this.showModal("5KG以上上门取件。1斤旧衣兑换1积分。1斤废纸及其他物资兑换0.3积分。仅支持贵阳地区（两城区上班日晚上及周末）");
   },
 
   //提交预约
@@ -208,6 +214,8 @@ Page({
     var that = this;
     //自动登录第一步，获取openid
     that.getOpenId(that);
+    //获取我的贡献数据
+    that.getContribtion(that);
   },
 
   //获取openid
@@ -255,5 +263,71 @@ Page({
         });
       }
     })
-  }
+  },
+
+  //获取我的贡献资源,个人
+  getContribtion: function (that) {
+    var url = app.config.basePath_web + "api/exe/get";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //我的贡献表
+        scriptName: 'Query',
+        nameSpaceMap: {
+          rows: [{
+            personalId: wx.getStorageSync("personalId"),  //用户id
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      //验证是否为空如果为空就生成一条贡献
+      if (app.checkInput(res.data.rows)) {
+        that.setContribtion(that);
+      } else {
+        var rows = res.data.rows[0];
+        rows.lemonIntegral = parseFloat(rows.lemonIntegral).toFixed(1);
+        that.setData({
+          myContribution: rows,
+        });
+      }
+    });
+  },
+
+  //设置我的贡献资源
+  setContribtion: function (that) {
+    var url = app.config.basePath_web + "api/exe/save";
+    //请求头
+    var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    //参数
+    var data = {
+      timeStamp: wx.getStorageSync("time"),
+      token: wx.getStorageSync("token"),
+      reqJson: JSON.stringify({
+        nameSpace: 'myContribution',           //我的贡献表
+        scriptName: 'Query',
+        cudScriptName: 'Save',
+        nameSpaceMap: {
+          rows: [{
+            avatarUrl: that.data.userInfo.avatarUrl,//头像
+            userName: that.data.userInfo.cnName,//名称
+            personalId: wx.getStorageSync("personalId"),  //用户id
+          }]
+        }
+      })
+    };
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      that.setData({
+        myContribution: res.data.rows[0],
+      });
+    });
+  },
 })

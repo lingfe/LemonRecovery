@@ -33,7 +33,7 @@
 
       <!-- 柠檬咨询 start-->
       <view class='consultation'>
-        <view class='consultation_text' bindtap='consultationBtntap'>咨询柠檬</view>
+        <view class='consultation_text' bindtap='bindtapShow'>咨询柠檬</view>
       </view>
       <!-- 柠檬咨询 end-->
     </view>
@@ -58,11 +58,12 @@
 
   <!-- 新的伙伴 start-->
   <view class='partner'>
-    <view class='partner_partner'>氧 气 榜 单</view>
+    <view class='partner_partner' style='letter-spacing:4rpx;'>氧 气 榜 单</view>
     <view class='partner_partner'>
        <block wx:for="{{myContributionAll}}" wx:key="*this">
         <!-- <swiper-item style="height:0%;">      -->
         <view class='partner_title'>
+          <view class='paixue'>{{index+1}}</view>
           <image class='img' src='{{item.avatarUrl}}' class='img'/>
           <view class='partner_name'>{{item.userName}}</view>
           <view class='partner_right'>为

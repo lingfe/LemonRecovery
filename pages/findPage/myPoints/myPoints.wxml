@@ -13,7 +13,7 @@
     <!-- 标题 end -->
 
     <!-- 文本 start -->
-    <view class='top_text'>我的积分</view>
+    <view class='top_text' bindtap='bindtapShow'>我的积分?</view>
     <!-- 文本 end -->
 
     <!-- 按钮 start -->
@@ -29,16 +29,20 @@
   <view class='square'>
     <view class='square_title'>兑换广场</view>
     <view class='square_content'>
-      <navigator url='/pages/findPage/myPoints/exchange/exchange?id={{item.id}}&lemonIntegral={{myContribution.lemonIntegral}}&myContributionId={{myContribution.id}}'wx:for="{{list}}" wx:key="*this">
-      <view class='content'>
+      <view class='content' wx:for="{{list}}" wx:key="*this">
+        <navigator url='/pages/findPage/myPoints/exchange/exchange?id={{item.id}}&lemonIntegral={{myContribution.lemonIntegral}}&myContributionId={{myContribution.id}}'>
         <image class='content_img' src='{{item.imgUrl}}'></image>
         <view class='content_title'>{{item.title}}</view>
-        <view class='content_prices'><image class='content_prices_img' src='/assets/images/find/gy.png'></image>
+        <view class='content_prices'><image class='content_prices_img' src='/assets/images/index1.png'></image>
         {{item.integral}}</view>
         <view class='content_text'>剩余: {{item.surplus}}</view>
+        </navigator>
       </view>
-      </navigator>
     </view>
   </view>
   <!-- 兑换广场 end -->
+  
+  <!--  到底了 start -->
+  <view class='daodila'>到底了</view>
+  <!--  到底了 end -->
 </view>

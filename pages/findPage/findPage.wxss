@@ -5,7 +5,7 @@
  * 
  * */
  page{
-   background-color: #Efefef;
+   background-color: #F7F8F3;
  }
 
  .find_img{
@@ -55,3 +55,9 @@
    margin-right: 20rpx;
    float: right;
  }
+.menv_v_img{
+  position: relative;
+  top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}

@@ -12,17 +12,19 @@
     <view class='menu' bindtap='bindtapGyLemon'>
        <image class='menu_img' src='/assets/images/find/gy.png'></image>
        <view class='menu_text'>关于柠檬</view>
-       <view class='menu_v'>></view>
+       <view class='menu_v'><image class='menv_v_img' src='/assets/images/find/y_jt.png'></image></view>
     </view>
     <view class='menu' bindtap='bindtapLemonCommonweal'>
        <image class='menu_img' src='/assets/images/find/goyi.png'></image>
        <view class='menu_text'>柠檬公益</view>
-       <view class='menu_v'>></view>
+       <view class='menu_v'><image class='menv_v_img' src='/assets/images/find/y_jt.png'></image></view>
     </view>
     <view class='menu' bindtap='bindtapPoints'>
        <image class='menu_img' src='/assets/images/find/jf.png'></image>
        <view class='menu_text'>积分兑换</view>
-       <view class='menu_v'>></view>
+       <view class='menu_v'>
+        <image class='menv_v_img' src='/assets/images/find/y_jt.png'></image>
+       </view>
     </view>
   </view>
 </view>

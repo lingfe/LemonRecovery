@@ -58,7 +58,7 @@
   <!-- 回收清单 start-->
   <view class='recyclingList'>
       <view class='recyclingList_title'>回 收 清 单
-        <image class='recyclingList_title_img' src='/assets/images/index/whao.png' />
+        <image class='recyclingList_title_img' bindtap='bindtapShow' src='/assets/images/index/whao.png' />
       </view>
       <view class='recyclingLIst_content'>
         <!-- 滑动菜单 start
@@ -69,7 +69,7 @@
           duration        滑动动画时长
           vertical        滑动方向是否为纵向
          -->
-        <swiper class='swiper' autoplay="true" indicator-dots="true" circular="true"  interval="5000" duration="2000">
+        <swiper class='swiper' indicator-dots="true" circular="true"  duration="1000">
           <swiper-item>
             <view class='content'>
               <view class='conten_content'>

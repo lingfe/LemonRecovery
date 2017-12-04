@@ -82,7 +82,7 @@
    margin-right: 20rpx;
  }
  .time_coum_img{
-     width: 10%;
+     width: 14%;
   height: 26rpx;
   border-radius: 10rpx;
   margin-right: 10rpx;

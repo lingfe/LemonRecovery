@@ -5,7 +5,7 @@
  * 
  * */
   page{
-    background-color: #fff;
+    background-color: #F7F8F3;
   }
   .neiro{
     width: 94%;

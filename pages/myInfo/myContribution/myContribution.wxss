@@ -4,10 +4,9 @@
  *   描述:  我的贡献
  * 
  * */
-   page{
-  background-color: #E8EFEF;
- }
-
+  page{
+    background-color: #F7F8F3;
+  }
  /*我的预贡献*/
 .myContribution{
   width: 100%;
@@ -61,8 +60,8 @@
 
 /*图片*/
 .content_img{
-  width: 50rpx;
-  height: 42rpx;
+  width: 40rpx;
+  height: 40rpx;
   float: left;
   margin-left: 20rpx;
 }

@@ -5,7 +5,7 @@
  * 
  * */
   page{
-  background-color: #E8EFEF;
+  background-color: #F7F8F3;
  }
 
 /*背景*/
@@ -107,18 +107,18 @@
   width: 90%;
   margin: 0rpx auto;
   position: relative;
-  height: 150rpx;
+  height: 140rpx;
 }
 .my{
   position: relative;
-  width: 26%;
+  width: 22%;
   height: 110rpx;
   line-height: 110rpx;
   font-size: 26rpx;
   text-align: center;
   float: left;
   margin-top: 20rpx;
-  margin-left: 6%;
+  margin-left: 8%;
 }
 
 /*新的伙伴*/
@@ -138,6 +138,7 @@
    padding-bottom: 20rpx;
    background-color: #fff;
    text-align: center;
+   
 }
 .partner_title{
   width: 100%;
@@ -149,18 +150,29 @@
   bottom: 10rpx;
   float: left;
 }
+.paixue{
+  color: #14bac8;
+  float: left;
+  margin-left: 3%;
+  height:60rpx;
+  line-height: 60rpx;
+}
 .img{
   width: 60rpx;
   height: 60rpx;
   float: left;
-  margin-left: 6%;
+  margin-left: 3%;
   border-radius: 50px;
 }
 .partner_name{
   float: left;
   line-height: 60rpx;
   margin-left: 10rpx;
-  
+  width: 26%;
+  text-align: left;
+  overflow: hidden; /**自动隐藏文字*/
+  text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+  white-space: nowrap; /*强制不换行 */
 }
 .partner_right{
 
@@ -275,9 +287,9 @@ button::after {
 
 /*图片*/
 .content_img{
-  width: 80rpx;
-  height: 80rpx;
-  margin-left: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 24%;
 }
 .content_text{
   width: 110rpx;

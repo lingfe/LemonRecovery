@@ -5,7 +5,7 @@
  * 
  * */
  page{
-   background-color: #E8EFEF;
+   background-color: #F7F8F3;
  }
 
  .myorder{
@@ -53,6 +53,7 @@
    height: 50rpx;
    font-size: 20rpx;
    line-height: 50rpx;
+   color: #ddd;
    float: left;
  }
  .time_coum{
@@ -64,14 +65,14 @@
    text-align: center;
  }
  .img{
-   width: 40%;
+   width: 44%;
    margin-top: 10rpx;
    margin-left: 10rpx;
    height: 180rpx;
    float: left;
  }
  .text{
-   width: 49%;
+   width: 44%;
    height: 200rpx;
    float: left;
  }
@@ -87,10 +88,12 @@
    font-size: 20rpx;
    height: 50rpx;
    line-height: 50rpx;
+   color: #ccc;
  }
  .span{
    font-size: 30rpx;
    margin-right: 20rpx;
+   color: #000;
  }
 
  .btn0{
@@ -115,8 +118,11 @@
  }
 
  .time_coum_img{
-     width: 10%;
+     width: 14%;
   height: 26rpx;
   border-radius: 10rpx;
   margin-right: 10rpx;
+  margin-left: 10rpx;
+  position: relative;
+  top:1rpx;
  }

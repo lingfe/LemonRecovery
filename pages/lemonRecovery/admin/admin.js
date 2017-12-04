@@ -275,6 +275,11 @@ Page({
       return;
     }
 
+    if (app.checkInput(form.collector)){
+      that.showModal('请输入收集员密匙！');
+      return;
+    }
+
     //url
     var url = app.config.basePath_web + "api/exe/save";
     //请求头

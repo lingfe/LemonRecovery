@@ -4,9 +4,9 @@
  *   描述:  管理员
  * 
  * */
-page{
-  background-color: #F7F8F3;
-}
+  page{
+    background-color: #F7F8F3;
+  }
 
  /*菜单*/
 .select_text{
