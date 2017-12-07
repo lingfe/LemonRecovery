@@ -47,7 +47,7 @@
         <image class='content_img' src='/assets/images/myinfo/my_yy.png' />
         <view class='content_text'>我的预约</view>
       </view>
-      <view class='my'>|</view>
+      <view class='my_I'>|</view>
       <view class='my' bindtap='bindtabContribtion'>
         <image class='content_img' src='/assets/images/myinfo/my_gx.png' />
         <view class='content_text'>我的贡献</view>

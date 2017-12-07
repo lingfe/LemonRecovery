@@ -64,14 +64,14 @@
   width: 54%;
   margin: auto;
   height: 100rpx;
-  margin-top: 40rpx; 
+  margin-top: 70rpx; 
+   color: grey;
 }
 .content_img{
   width: 30%;
   height: 120rpx;
   float: left;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
+  margin-left: 70rpx;
 }
 .content_img2{
   width: 25%;
@@ -86,15 +86,17 @@
   width: auto;
   position: relative;
   top: 40rpx;
-  color: #666;
+  color: gray;
   text-align: center;
+  font-size:36rpx;
+  margin-bottom:100rpx;
 }
 
 /*拒收清单*/
 .jushou{
   width: 56%;
-  padding-top: 40rpx;
-  height: 50rpx;
+  padding-top: 60rpx;
+  height: 70rpx;
   margin: auto;
 
 }
@@ -108,14 +110,14 @@
   height: 38rpx;
   width: 38rpx;
   float: left;
-  
+  margin-top: -1rpx;
 }
 .jushou_text{
   height: 50rpx;
   width: auto;
   float: left;
-  margin-left: 40rpx;
+  margin-left: 20rpx;
   color: #aaa;
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 

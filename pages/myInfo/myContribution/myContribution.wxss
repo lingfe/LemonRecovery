@@ -13,7 +13,7 @@
   height: auto;
   background-color: #fff;
   position:relative;
-  padding-top: 10rpx;
+  padding-top: 20rpx;
   margin-bottom: 20rpx;
 }
 .myContribution_title{
@@ -22,12 +22,14 @@
   text-align: center;
 }
 .myContribution___{
-  width: 60rpx;
-  height: 4rpx;
+  width: 4%;
+  height: 2rpx;
   position: relative;
-  top: 8rpx;
+  top: 16rpx;
   background-color: #666;
   margin:auto;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 .myContribution_view{
   width: 90%;
