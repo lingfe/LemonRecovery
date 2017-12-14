@@ -70,6 +70,7 @@ Page({
         nameSpace: 'recyclingRecords',           //积分回收纪录表
         scriptName: 'Query',
         nameSpaceMap: {
+          orderByClause: 'mdate desc',
           rows: [{
             personalId: wx.getStorageSync("personalId"),  //用户id
           }]

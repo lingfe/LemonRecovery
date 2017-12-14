@@ -97,6 +97,7 @@ Page({
         nameSpace: 'lemonRecovery',           //预约表
         scriptName: 'Query',
         nameSpaceMap: {
+          orderByClause: 'mdate desc',
           rows: [{
             personalId: wx.getStorageSync("personalId"),  //用户id
           }]

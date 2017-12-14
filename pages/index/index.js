@@ -18,7 +18,7 @@ Page({
     phone:null,
     remark:null,
     startTime:new Date(),
-    region: ['观山湖区', '云岩区-大营坡'],
+    region: ['观山湖区', '云岩区-大营坡', '云岩区', '南明区', '白云区','乌当区'],
     customItem: '全部'
   },
 
@@ -154,6 +154,7 @@ Page({
     var header = {
       "Content-Type": "application/x-www-form-urlencoded"
     };
+    console.log(that.data.userInfo);
     //参数
     var time = new Date().getTime();
     var token = app.md5.hexMD5(app.globalData.token + time.toString()).toUpperCase();
@@ -199,9 +200,8 @@ Page({
           wx.setStorageSync("user", user);
 
           //登录成功！跳转到首页
-          wx.switchTab({
-            url: '/pages/index/index',
-          });
+          //获取我的贡献数据
+          that.getContribtion(that);
         }
       }, function (res) {
         //提示
@@ -214,8 +214,6 @@ Page({
     var that = this;
     //自动登录第一步，获取openid
     that.getOpenId(that);
-    //获取我的贡献数据
-    that.getContribtion(that);
   },
 
   //获取openid
@@ -305,6 +303,7 @@ Page({
     var url = app.config.basePath_web + "api/exe/save";
     //请求头
     var header = { cookie: wx.getStorageSync("cookie"), "Content-Type": "application/x-www-form-urlencoded" };
+    console.log(that.data.userInfo);
     //参数
     var data = {
       timeStamp: wx.getStorageSync("time"),
@@ -316,7 +315,7 @@ Page({
         nameSpaceMap: {
           rows: [{
             avatarUrl: that.data.userInfo.avatarUrl,//头像
-            userName: that.data.userInfo.cnName,//名称
+            userName: that.data.userInfo.nickName,//名称
             personalId: wx.getStorageSync("personalId"),  //用户id
           }]
         }
