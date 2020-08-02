@@ -9,7 +9,7 @@
 
   <!-- 订单数据 start-->
   <view class='list' wx:if="{{list!=null}}">
-    <view class='list_item'  wx:for="{{list}}" wx:key="{{*this}}">
+    <view class='list_item'  wx:for="{{list}}" wx:key="{{item}}">
       <view class='item'>
         <view class='item_text'>订单编号: {{item.id}}</view>
       </view>
