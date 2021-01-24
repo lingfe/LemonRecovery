@@ -14,7 +14,9 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.5.3",
@@ -36,6 +38,10 @@
 			"list": []
 		},
 		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -116,7 +122,14 @@
 				{
 					"id": -1,
 					"name": "123",
-					"pathName": "pages/lemonRecovery/admin/admin"
+					"pathName": "pages/lemonRecovery/admin/admin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/lemonRecovery/admin/admin",
+					"pathName": "pages/lemonRecovery/admin/admin",
+					"scene": null
 				}
 			]
 		}
